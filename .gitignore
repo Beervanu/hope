@@ -1,0 +1,4 @@
+debug*.txt
+logs*.txt
+token.env
+**/Guilds
