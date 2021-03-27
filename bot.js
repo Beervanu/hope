@@ -15,4 +15,4 @@ ch.add_commands(path.resolve('./Commands'), path.resolve('./Checks'))
 ch.add_events(path.resolve('./Events'))
 ch.template=path.resolve('./template.json')
 
-client.login(process.env.TOKEN)
+client.login("NjkxNjYxOTEzMzk4MDUwODI5.XnjOWg.dIsz2r89X97xxGPN9BeXoGHD4Jk")
