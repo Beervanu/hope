@@ -4,10 +4,7 @@ const Discord = require('discord.js')
 
 const { Client } = require('pg');
 const pgClient = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
+  connectionString: process.env.DATABASE_URL
 });
 
 //mine
