@@ -2,12 +2,35 @@
 const path = require('path')
 const Discord = require('discord.js')
 
+const { Client } = require('pg');
+const pgClient = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
 //mine
 const command = require('./CommandHandler/command_handler.js')
 
 
 const client = new Discord.Client()
+
+pgClient.connect();
+
+const query = `CREATE TABLE guilds (
+	id varchar,
+	name text
+);`
+
+pgClient.query(query, (err, res) => {
+  if (err)
+  {
+  	console.log(err)
+  	return;
+  }
+  pgClient.end();
+});
 
 
 const ch = new command.CommandHandler(client, '.', 'Hope', path.resolve('./Guilds'))

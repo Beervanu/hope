@@ -1,8 +1,23 @@
+const { Client } = require('pg');
 
-let x = {
-	r: 2,
-	y: 'f'
-}
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
-x?.d = 2
-console.log(x)
+client.connect();
+
+const query = `CREATE TABLE guilds (
+	id varchar,
+	name text
+);`
+
+client.query(query, (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+  client.end();
+});
