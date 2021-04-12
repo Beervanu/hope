@@ -58,23 +58,23 @@ function check_context(current)
 function writeDebug(data='', terminator='\n')
 {
 	let debug_path = `${__dirname}/debug.txt`
-	if (isFileOver5MB(debug_path))
-	{
-		fs.copyFileSync(debug_path, `${__dirname}/debug2.txt`)
-		fs.writeFileSync(debug_path, `Reset at ${Date()}\n`)
-	}
+	// if (isFileOver5MB(debug_path))
+	// {
+	// 	fs.copyFileSync(debug_path, `${__dirname}/debug2.txt`)
+	// 	fs.writeFileSync(debug_path, `Reset at ${Date()}\n`)
+	// }
 	fs.appendFileSync(debug_path, data + terminator)
 }
 
 function writeLog(data='', terminator='\n')
 {
 	let log_path = `${__dirname}/logs.txt`
-	if (isFileOver5MB(log_path))
-	{
-		fs.copyFileSync(log_path, `${__dirname}/logs2.txt`)
-		fs.appendFileSync(`${__dirname}/logs2.txt`, `Reset at ${Date()}`)
-		fs.writeFileSync(log_path, `Reset at ${Date()}\n`)
-	}
+	// if (isFileOver5MB(log_path))
+	// {
+	// 	fs.copyFileSync(log_path, `${__dirname}/logs2.txt`)
+	// 	fs.appendFileSync(`${__dirname}/logs2.txt`, `Reset at ${Date()}`)
+	// 	fs.writeFileSync(log_path, `Reset at ${Date()}\n`)
+	// }
 	fs.appendFileSync(log_path, data + terminator)
 }
 

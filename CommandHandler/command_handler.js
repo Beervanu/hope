@@ -1,11 +1,15 @@
 const fs = require('fs')
 const Debug = require('../Debug/debug.js')
 const command = require('./command.js')
+const Backup = require('../FileBackup/file_backup.js')
 
 exports.CommandHandler = class CommandHandler
 {
-	constructor(client, prefix, name, guild_dir)
+	constructor(client, prefix, name, guild_dir, backup_user_id = '807914451457146900')
 	{
+		client.users.fetch(backup_user_id)
+			.then(usr=> usr.createDm()
+				.then(dm => this.backup = Backup.Backup(dm)))
 		this.Debug = Debug
 		this.client = client
 		this.name = name
@@ -64,9 +68,9 @@ exports.CommandHandler = class CommandHandler
 						this.guilds[guild.id].people[member.id] = {roles: member.roles.cache.keyArray()}
 					})
 
-
 					this.save_guild_json(guild.id)
 				}
+				this.backup.watch(`${this.guild_dir}/${guild.id}.json`)
 			})
 			
 		})
