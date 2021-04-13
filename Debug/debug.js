@@ -23,20 +23,23 @@ exports.debug = function debug(string, ctx = '')
 
 exports.log_message = function log_message(msg)
 {
-	if (CONFIG.logs.show_logs)
+	if (CONFIG.logs.show_logs&&)
 	{
-		let output
-		if (CONFIG.logs.simplified)
+		if (msg.author.id !== '807914451457146900'||msg.channel.type !== 'dm')
 		{
-			output = msg.author.username + ' in #' + msg.channel.name + ': '
-		}
-		else
-		{
-			output = msg.createdAt.toDateString() + ' Logs: ' + msg.author.username + ' in #' + msg.channel.name + ': '
-		}
-		
-		msg.content ? output += msg.cleanContent : output += 'placeholder for embed'
-		writeLog(output)
+			let output
+			if (CONFIG.logs.simplified)
+			{
+				output = `${msg.author.username} in #${msg.channel.name||msg.channel?.recipient.username}: `
+			}
+			else
+			{
+				output = `${msg.createdAt.toDateString()} Logs: ${msg.author.username} in #${msg.channel.name||msg.channel?.recipient.username}: `
+			}
+			
+			msg.content ? output += msg.cleanContent : output += 'placeholder for non-text'
+			writeLog(output)
+		}	
 	}
 }
 

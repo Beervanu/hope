@@ -8,7 +8,7 @@ const command = require('./CommandHandler/command_handler.js')
 
 const client = new Discord.Client()
 // '807914451457146900' cockslayer id
-const ch = new command.CommandHandler(client, '.', 'Hope', path.resolve('./Guilds'))
+const ch = new command.CommandHandler(client, '.', 'Hope', path.resolve('./Guilds'), '807914451457146900')
 ch.add_commands(path.resolve('./Commands'), path.resolve('./Checks'))
 ch.add_events(path.resolve('./Events'))
 ch.template=path.resolve('./template.json')
