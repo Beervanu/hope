@@ -27,9 +27,10 @@ exports.Backup = class Backup
 		this.client.users.resolve(this.backup_user_id).createDM()
 			.then(dm => 
 			{
+				console.log(dm)
 				dm.messages.fetch({limit: 1}).then(messages =>
 				{
-					messages.first().attachments.each(att =>
+					messages.first()?.attachments.each(att =>
 					{
 						this.download(att)
 					})
@@ -47,7 +48,10 @@ exports.Backup = class Backup
         		Debug.debug(`Backing up ${this.files[i]}`, this)
         		resolvedFiles.push(`${this.directory}/${this.files[i]}`)
         	}
-            this.client.users.fetch(this.backup_user_id).then(usr=> usr.send({files: resolvedFiles}))
+            this.client.users.resolve(this.backup_user_id).createDM().then(dm=> 
+            {
+            	dm.send({files: resolvedFiles})
+            })
         }
     }
 

@@ -41,9 +41,9 @@ exports.CommandHandler = class CommandHandler
 		}
 	}
 
-	load_guilds(guild_dir)
+	load_guilds()
 	{
-		fs.readdir(guild_dir, (err, files) => 
+		fs.readdir(this.guild_dir, (err, files) => 
 		{
 			this.client.guilds.cache.each(guild => {
 				let exists = false
@@ -52,7 +52,7 @@ exports.CommandHandler = class CommandHandler
 					if (files[j] === `${guild.id}.json`)
 					{
 						Debug.debug(`${guild.name} (server file) has been loaded`, this)
-						this.guilds[guild.id] = JSON.parse(fs.readFileSync(`${guild_dir}/${files[j]}`))
+						this.guilds[guild.id] = JSON.parse(fs.readFileSync(`${this.guild_dir}/${files[j]}`))
 						exists = true
 						break;
 					}
@@ -133,6 +133,7 @@ exports.CommandHandler = class CommandHandler
 
 	message_searchers(msg)
 	{
+		let match
 		if (msg.content.match(/b+r+u+h+/))
 		{
 			this.guilds[msg.guild.id]['bruh_counter']++
@@ -141,13 +142,17 @@ exports.CommandHandler = class CommandHandler
 				message.delete({timeout: 5000})
 			})
 		}
-		if (msg.content.match(/j+e+ez+/))
+		if (msg.content.match(/j+ee+z+/))
 		{
 			msg.channel.send(`mans getting pissed`).then(message => {
 				message.delete({timeout: 5000})
 			})
 		}
-		
+
+		if (match = msg.content.match(/c4arena\.com\S*/))
+		{
+			msg.channel.send(`http://${match}`)
+		}
 	}
 }
 
