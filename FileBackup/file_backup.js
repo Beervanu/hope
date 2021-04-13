@@ -4,17 +4,14 @@ const Debug = require('../Debug/debug.js')
 
 exports.Backup = class Backup
 {
-    constructor(client, backup_user_id, directory, files=[])
+    constructor(client, backup_user_id, directory)
     {
+    	this.name = directory
     	this.client = client
     	this.directory = directory
-        this.files = files
+        this.files = []
         this.retrieved = false
         this.backup_user_id = backup_user_id
-        for(let i = files.length; i--;)
-        {
-            this.watch(files[i])
-        }
     }
 
     watch(filename)
