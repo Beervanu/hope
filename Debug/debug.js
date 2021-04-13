@@ -23,7 +23,7 @@ exports.debug = function debug(string, ctx = '')
 
 exports.log_message = function log_message(msg)
 {
-	if (CONFIG.logs.show_logs&&)
+	if (CONFIG.logs.show_logs)
 	{
 		if (msg.author.id !== '807914451457146900'||msg.channel.type !== 'dm')
 		{
