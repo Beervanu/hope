@@ -27,7 +27,6 @@ exports.Backup = class Backup
 		this.client.users.resolve(this.backup_user_id).createDM()
 			.then(dm => 
 			{
-				console.log(dm)
 				dm.messages.fetch({limit: 1}).then(messages =>
 				{
 					messages.first()?.attachments.each(att =>
