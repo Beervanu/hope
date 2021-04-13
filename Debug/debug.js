@@ -25,7 +25,7 @@ exports.log_message = function log_message(msg)
 {
 	if (CONFIG.logs.show_logs)
 	{
-		if (msg.author.id !== '807914451457146900'||msg.channel.type !== 'dm')
+		if (msg.channel.type !== 'dm'||msg.channel.recipient.id !== '807914451457146900')
 		{
 			let output
 			if (CONFIG.logs.simplified)
