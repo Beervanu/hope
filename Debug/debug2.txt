@@ -1,0 +1,26 @@
+CONFIG FILE
+------
+    debug: 
+        show_debug_messages: true
+    logs: 
+        show_logs: true
+        simplified: true
+------
+End CONFIG FILE
+
+Debug: CommandHandler: Hope: Among_us_code has been added
+Debug: CommandHandler: Hope: Bruh_counter has been added
+Debug: CommandHandler: Hope: Help has been added
+Debug: CommandHandler: Hope: Mute has been added
+Debug: CommandHandler: Hope: Ping has been added
+Debug: CommandHandler: Hope: Purge has been added
+Debug: CommandHandler: Hope: Send has been added
+Debug: CommandHandler: Hope: Settings has been added
+Debug: CommandHandler: Hope: Test_mode has been added
+Debug: CommandHandler: Hope: Unmute has been added
+Debug: CommandHandler: Hope: Update has been added
+Debug: CommandHandler: Hope: Voice_chat has been added
+Debug: CommandHandler: Hope: guildCreate (event) has been added
+Debug: CommandHandler: Hope: guildMemberAdd (event) has been added
+Debug: CommandHandler: Hope: guildMemberRemove (event) has been added
+Debug: CommandHandler: Hope: message (event) has been added

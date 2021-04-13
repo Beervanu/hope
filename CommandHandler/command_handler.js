@@ -45,7 +45,6 @@ exports.CommandHandler = class CommandHandler
 	{
 		fs.readdir(guild_dir, (err, files) => 
 		{
-			console.log(err, files)
 			this.client.guilds.cache.each(guild => {
 				let exists = false
 				for (let j = files.length; j--;)
