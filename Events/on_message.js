@@ -1,7 +1,7 @@
 exports.func = async function on_message(msg)
 {
 	this.Debug.log_message(msg)
-	if (msg.author.id !== this.client.user.id)
+	if (msg.author.id !== this.client.user.id&&!this.backup.retrieved)
 	{
 		this.process_message(msg)
 	}

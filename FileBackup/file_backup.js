@@ -2,7 +2,7 @@ const fs = require('fs')
 const request = require('request')
 const Debug = require('../Debug/debug.js')
 
-exports.Backup = class Backup
+exports.Backup = class Backup extends EventEmitter
 {
     constructor(client, backup_user_id, directory)
     {
@@ -33,6 +33,7 @@ exports.Backup = class Backup
 					{
 						this.download(att)
 					})
+					this.emit('retrieved')
 					this.retrieved = true
 				})	
 			})
