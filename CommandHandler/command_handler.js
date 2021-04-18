@@ -140,7 +140,7 @@ exports.CommandHandler = class CommandHandler
 	message_searchers(msg)
 	{
 		let match
-		if (msg.content.match(/b+r+u+h+/))
+		if (msg.content.match(/b+r+u+h+/i))
 		{
 			this.guilds[msg.guild.id]['bruh_counter']++
 			this.save_guild_json(msg.guild.id)
@@ -148,7 +148,7 @@ exports.CommandHandler = class CommandHandler
 				message.delete({timeout: 5000})
 			})
 		}
-		if (msg.content.match(/j+ee+z+/))
+		if (msg.content.match(/j+ee+z+/i))
 		{
 			msg.channel.send(`mans getting pissed`).then(message => {
 				message.delete({timeout: 5000})

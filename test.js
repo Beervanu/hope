@@ -1,6 +1,6 @@
-let msg = 'c4arena.com/epic'
+let msg = 'BRUh'
 let c4
-if (c4 = msg.match(/c4arena\.com\S*/))
+if (c4 = msg.match(/bruh/i))
 {
 	console.log(c4)
 }
