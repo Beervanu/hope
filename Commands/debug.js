@@ -1,6 +1,6 @@
 exports.func = async function debug(msg)
 {
-	msg.channel.send({
+	msg.author.send({
 		files: [{
 			attachment: this.Debug.debug_path
 		},
@@ -19,5 +19,6 @@ exports.func = async function debug(msg)
 exports.info = {
 	aliases: ['d'],
 	group: 'Dev',
-	brief_desc: 'Sends debug info (if something broke)'
+	brief_desc: 'Sends debug info (if something broke)',
+	checks: ['only_me']
 }

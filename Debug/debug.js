@@ -6,7 +6,7 @@ const path = require('path')
 exports.debug_path = `${__dirname}/debug.txt`
 exports.debug_path2 = `${__dirname}/debug2.txt`
 exports.log_path = `${__dirname}/logs.txt`
-exports.log_path2 = `${__dirname}/logs.txt`
+exports.log_path2 = `${__dirname}/logs2.txt`
 
 exports.debug = function debug(string, ctx = '')
 {

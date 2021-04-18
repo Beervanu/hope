@@ -18,7 +18,7 @@ exports.CommandHandler = class CommandHandler
 		this.guild_dir = guild_dir
 	}
 
-	process_message(msg)
+	async process_message(msg)
 	{
 		try {
 			var err = this.commands[this.commandMatcher.exec(msg.content.toLowerCase())[1]](msg)

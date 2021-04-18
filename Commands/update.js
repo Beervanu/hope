@@ -1,14 +1,42 @@
 exports.func = async function update(msg, parameters)
 {
 	let mode = ['add', 'remove'].includes(parameters[0]) ? parameters[0] : 'add'
+	let update_embed = {
+			title: 'Editing roles',
+			color: 'GOLD',
+			description: `Mode: ${mode}`,
+			footer: ''
+	}
+	let update_message = await msg.channel.send({embed: update_embed})
+	let members_edited = []
 	if (mode === 'add')
 	{
-		members.each(member=>member.edit({roles: roles.concat(member.roles.cache)}))
+		msg.mentions.members.each(member=>
+		{
+			members_edited.push(member.displayName)
+			update_embed.footer = {text: `Adding roles to ${member.displayName}`}
+			update_message.edit({embed: update_embed})
+			member.edit({roles: msg.mentions.roles.concat(member.roles.cache)})
+		})
 	}
 	else if (mode === 'remove')
 	{
-		members.each(member=>member.edit({roles: roles.difference(member.roles.cache)}))
+		msg.mentions.members.each(member=>
+		{
+			members_edited.push(member.displayName)
+			update_embed.footer = {text: `Removing roles from ${member.displayName}`}
+			update_message.edit({embed: update_embed})
+			member.edit({roles: msg.mentions.roles.difference(member.roles.cache)})
+		})
 	}
+	update_message.edit({
+		embed: {
+			title: 'Finished Editing Roles',
+			description: `Members Edited: ${members_edited.join(', ')}`,
+			color: 'GOLD',
+			footer: {text: 'Completed'}
+		}
+	})
 }
 
 exports.info = {

@@ -1,4 +1,4 @@
-Started at Tue Apr 13 2021 13:01:47 GMT+0100 (British Summer Time)
+Started at Sun Apr 18 2021 09:47:23 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -34,38 +34,12 @@ Debug: CommandHandler: Hope: connected
 
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Retrieving files from 807914451457146900 (id)
 
-Debug: CommandHandler: Hope: 10W Official Discord (server file) has been loaded
+Debug: CommandHandler: Hope: b t (server file) has been loaded
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 588118182380699710.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Rewriting 691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 691652992679542836.json
 
-Debug: CommandHandler: Hope: Yr 10 SGS Official Server (server file) has been loaded
-
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Rewriting 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Rewriting 588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 588118182380699710.json
-
-Debug: Command: Ping: has been called
-Debug: Command: Ping: execution time 236 ms
-
-Debug: Command: Bruh_counter: has been called
-Debug: Command: Bruh_counter: execution time 2 ms
+Debug: Command: Debug: has been called
+Debug: Command: Debug: execution time 3 ms
