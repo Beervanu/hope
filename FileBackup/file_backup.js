@@ -33,13 +33,14 @@ exports.Backup = class Backup
 					{
 						this.download(att)
 					})
+					this.retrieved = true
 				})	
 			})
     }
 
     backup(eventType, filename)
     {
-        if (eventType === 'change')
+        if (eventType === 'change'&&this.retrieved)
         {
         	let resolvedFiles = []
         	for(let i = this.files.length; i--;)
