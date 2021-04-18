@@ -7,6 +7,7 @@ exports.Backup = class Backup extends EventEmitter
 {
     constructor(client, backup_user_id, directory)
     {
+    	super()
     	this.name = directory
     	this.client = client
     	this.directory = directory
