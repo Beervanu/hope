@@ -1,0 +1,6 @@
+Be'ervanu in #bot-test: .ping
+Test986 in #bot-test: Pong! (number to be calculated) ms
+Be'ervanu in #bot-test: .h
+Test986 in #bot-test: placeholder for non-text
+Be'ervanu in #bot-test: .bc
+Test986 in #bot-test: There have been 9 bruh momentos

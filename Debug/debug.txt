@@ -1,4 +1,4 @@
-Started at Sun Apr 18 2021 10:14:34 GMT+0100 (British Summer Time)
+Started at Sun Apr 18 2021 11:57:03 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -33,5 +33,19 @@ Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope\Events (
 Debug: CommandHandler: Hope: connected
 
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Retrieving files from 807914451457146900 (id)
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/833290750635933756/691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Waiting 0
 
+Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
+
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836.json
+
+Debug: Command: Ping: has been called
+Debug: Command: Ping: execution time 198 ms
+
+Debug: Command: Help: has been called
+Debug: Command: Help: execution time 3 ms
+
+Debug: Command: Bruh_counter: has been called
+Debug: Command: Bruh_counter: execution time 1 ms

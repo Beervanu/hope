@@ -14,6 +14,7 @@ exports.Backup = class Backup extends EventEmitter
         this.files = []
         this.retrieved = false
         this.backup_user_id = backup_user_id
+        this.num_files_to_retrieve = 0
     }
 
     watch(filename)
@@ -31,12 +32,11 @@ exports.Backup = class Backup extends EventEmitter
 			{
 				dm.messages.fetch({limit: 1}).then(messages =>
 				{
+					this.num_files_to_retrieve = messages.first()?.attachments.size
 					messages.first()?.attachments.each(att =>
 					{
 						this.download(att)
-					})
-					this.emit('retrieved')
-					this.retrieved = true
+					})						
 				})	
 			})
     }
@@ -60,8 +60,21 @@ exports.Backup = class Backup extends EventEmitter
 
     download(attachment)
     {
-    	Debug.debug(`Rewriting ${attachment.name}`, this)
-    	request.get(attachment.url)    		
-    		.pipe(fs.createWriteStream(`${this.directory}/${attachment.name}`))
+    	Debug.debug(`Downloading and rewriting ${attachment.name} from ${attachment.url}`, this)
+    	let stream = fs.createWriteStream(`${this.directory}/${attachment.name}`)
+    	stream.on('finish', () => this.waitForDownload())
+		request.get(attachment.url).pipe(stream)
+
+    }
+
+    waitForDownload()
+    {
+    	this.num_files_to_retrieve--
+    	Debug.debug(`${this.num_files_to_retrieve} files left to download`, this)
+    	if(this.num_files_to_retrieve === 0)
+    	{
+    		this.emit('retrieved')
+    		this.retrieved = true
+    	} 
     }
 }

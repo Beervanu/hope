@@ -7,9 +7,11 @@ exports.CommandHandler = class CommandHandler
 	constructor(client, prefix, name, guild_dir, backup_user_id)
 	{
 		this.backup = new Backup.Backup(client, backup_user_id, guild_dir)
+		this.retrieved = false
 		this.backup.on('retrieved', () => {
 			this.Debug.debug(`Files retrieved from backup`, this)
 			this.load_guilds()
+			this.retrieved = true
 		})
 		this.Debug = Debug
 		this.client = client
