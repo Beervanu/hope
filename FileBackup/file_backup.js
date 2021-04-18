@@ -1,6 +1,7 @@
 const fs = require('fs')
 const request = require('request')
 const Debug = require('../Debug/debug.js')
+const EventEmitter = require('events')
 
 exports.Backup = class Backup extends EventEmitter
 {
