@@ -1,4 +1,4 @@
-Started at Wed May 19 2021 20:45:45 GMT+0100 (British Summer Time)
+Started at Wed May 19 2021 21:49:43 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -44,15 +44,10 @@ Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
 
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 691652992679542836.json
 
-Debug: Command: Join: has been called
-Debug: Command: Join: execution time 673 ms
+Debug: Command: Ping: has been called
+Debug: Command: Ping: execution time 197 ms
 
-Debug: Command: Clip: has been called
-Debug: Command: Clip: execution time 42 ms
-Debug: Command: Clip: has been called
-Debug: Command: Clip: execution time 120 ms
-Debug: Command: Clip: has been called
-Debug: Command: Clip: execution time 82 ms
-Debug: Command: Clip: has been called
-Debug: Command: Clip: execution time 62 ms
+Debug: Command: Help: has been called
+Debug: Command: Help: execution time 23 ms

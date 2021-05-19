@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const Debug = require('../Debug/debug.js')
-const util = require('util')
 
 exports.Command = class Command extends Function
 {

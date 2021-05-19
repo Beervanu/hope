@@ -1,12 +1,4 @@
-Be'ervanu in #bot-test: .j
+Be'ervanu in #bot-test: .ping
+Test986 in #bot-test: Pong! (number to be calculated) ms
+Be'ervanu in #bot-test: .h
 Test986 in #bot-test: placeholder for non-text
-Be'ervanu in #bot-test: .c 5
-Test986 in #bot-test: placeholder for non-text
-Be'ervanu in #bot-test: .c 5
-Test986 in #bot-test: placeholder for non-text
-Be'ervanu in #bot-test: .c 5
-Test986 in #bot-test: placeholder for non-text
-Be'ervanu in #bot-test: .c 5
-Test986 in #bot-test: placeholder for non-text
-Class707SWR in #bot-test: let's goooooooooo
-Be'ervanu in #bot-test: let's goo
