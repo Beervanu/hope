@@ -1,4 +1,4 @@
-Started at Sun Apr 18 2021 14:36:45 GMT+0100 (British Summer Time)
+Started at Wed May 19 2021 20:45:45 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -11,8 +11,11 @@ End CONFIG FILE
 
 Debug: CommandHandler: Hope: Among_us_code has been added
 Debug: CommandHandler: Hope: Bruh_counter has been added
+Debug: CommandHandler: Hope: Clip has been added
 Debug: CommandHandler: Hope: Debug has been added
+Debug: CommandHandler: Hope: Disconnect has been added
 Debug: CommandHandler: Hope: Help has been added
+Debug: CommandHandler: Hope: Join has been added
 Debug: CommandHandler: Hope: Mute has been added
 Debug: CommandHandler: Hope: Ping has been added
 Debug: CommandHandler: Hope: Purge has been added
@@ -28,12 +31,13 @@ Debug: CommandHandler: Hope: guildMemberRemove (event) has been added
 Debug: CommandHandler: Hope: guildMemberUpdate (event) has been added
 Debug: CommandHandler: Hope: message (event) has been added
 Debug: CommandHandler: Hope: ready (event) has been added
+Debug: CommandHandler: Hope: voiceStateUpdate (event) has been added
 Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope\Commands (commands folder) has been added
 Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope\Events (events folder) has been added
 Debug: CommandHandler: Hope: connected
 
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Retrieving files from 807914451457146900 (id)
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/833290750635933756/691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/837038590046371940/691652992679542836.json
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: 0 files left to download
 
 Debug: CommandHandler: Hope: Files retrieved from backup
@@ -41,19 +45,14 @@ Debug: CommandHandler: Hope: b t (server file) has been loaded
 
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836.json
 
-Debug: Command: Bruh_counter: has been called
-Debug: Command: Bruh_counter: execution time 4 ms
+Debug: Command: Join: has been called
+Debug: Command: Join: execution time 673 ms
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 691652992679542836.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 691652992679542836.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 691652992679542836.json
-
-Debug: Command: Bruh_counter: has been called
-Debug: Command: Bruh_counter: execution time 2 ms
-
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 691652992679542836.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 691652992679542836.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Backing up 691652992679542836.json
-
-Debug: Command: Bruh_counter: has been called
-Debug: Command: Bruh_counter: execution time 1 ms
+Debug: Command: Clip: has been called
+Debug: Command: Clip: execution time 42 ms
+Debug: Command: Clip: has been called
+Debug: Command: Clip: execution time 120 ms
+Debug: Command: Clip: has been called
+Debug: Command: Clip: execution time 82 ms
+Debug: Command: Clip: has been called
+Debug: Command: Clip: execution time 62 ms

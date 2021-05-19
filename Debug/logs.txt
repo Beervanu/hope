@@ -1,10 +1,12 @@
-Be'ervanu in #bot-test: .bc
-Test986 in #bot-test: There have been 9 bruh momentos
-Be'ervanu in #bot-test: bruh
-Test986 in #bot-test: Bruh momento numero: 10
-Be'ervanu in #bot-test: .bc
-Test986 in #bot-test: There have been 10 bruh momentos
-Be'ervanu in #bot-test: BRUH
-Test986 in #bot-test: Bruh momento numero: 11
-Be'ervanu in #bot-test: .bc
-Test986 in #bot-test: There have been 11 bruh momentos
+Be'ervanu in #bot-test: .j
+Test986 in #bot-test: placeholder for non-text
+Be'ervanu in #bot-test: .c 5
+Test986 in #bot-test: placeholder for non-text
+Be'ervanu in #bot-test: .c 5
+Test986 in #bot-test: placeholder for non-text
+Be'ervanu in #bot-test: .c 5
+Test986 in #bot-test: placeholder for non-text
+Be'ervanu in #bot-test: .c 5
+Test986 in #bot-test: placeholder for non-text
+Class707SWR in #bot-test: let's goooooooooo
+Be'ervanu in #bot-test: let's goo
