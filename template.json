@@ -1,8 +1,17 @@
 {
-	"channels":
+	"settings": 
 	{
-		"JOIN_MESSAGES": "",
-		"LEAVE_MESSAGES": ""
+		"channels":
+		{
+			"JOIN_MESSAGES": 
+			{
+				"help": "The channel to which messages are sent when people join"
+			},
+			"LEAVE_MESSAGES": 
+			{
+				"help": "The channel to which messages are sent when people leave"
+			}
+		}
 	},
 	"people": 
 	{

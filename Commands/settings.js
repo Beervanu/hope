@@ -21,3 +21,4 @@ exports.info = {
 	checks: ['is_valid_setting', 'only_admin', 'only_guild']
 }
 
+exports.disabled = true

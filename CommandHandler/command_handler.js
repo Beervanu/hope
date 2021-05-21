@@ -91,8 +91,15 @@ exports.CommandHandler = class CommandHandler
 		for await (const file of directory)
 		{
 			let event = require(`${event_dir}/${file.name}`)
-			Debug.debug(event.event + ' (event) has been added', this)
-			this.client.on(event.event, event.func.bind(this))
+			if (!event.disabled)
+			{
+				Debug.debug(event.event + ' (event) has been added', this)
+				this.client.on(event.event, event.func.bind(this))				
+			}
+			else 
+			{
+				Debug.debug(`Disabled event`, this)
+			}
 		}
 
 		Debug.debug(event_dir + ' (events folder) has been added', this)

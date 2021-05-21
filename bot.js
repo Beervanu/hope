@@ -12,5 +12,5 @@ ch.add_commands(path.resolve('./Commands'), path.resolve('./Checks'))
 ch.add_events(path.resolve('./Events'))
 ch.template=path.resolve('./template.json')
 
-client.login('NjkxNjUyMjU0NzYzMzE5MzI2.XnjFWw.xUo2HSU9J4uTES80ei7heZ-YuvU') //actual bot
-// client.login("NjkxNjYxOTEzMzk4MDUwODI5.XnjOWg.sOl5mfNHkc8zbT4dSdVQGAIQqLU") // test
+// client.login('NjkxNjUyMjU0NzYzMzE5MzI2.XnjFWw.xUo2HSU9J4uTES80ei7heZ-YuvU') //actual bot
+client.login("NjkxNjYxOTEzMzk4MDUwODI5.XnjOWg.sOl5mfNHkc8zbT4dSdVQGAIQqLU") // test
