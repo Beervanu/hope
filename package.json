@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Beervanu/hope#readme",
   "dependencies": {
+    "@discordjs/opus": "latest",
     "discord.js": "^12.5.3",
     "request": "latest",
     "readable-stream-clone": "latest",
