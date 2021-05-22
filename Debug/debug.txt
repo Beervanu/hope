@@ -1,4 +1,4 @@
-Started at Fri May 21 2021 22:57:48 GMT+0100 (British Summer Time)
+Started at Sat May 22 2021 18:19:15 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -20,7 +20,7 @@ Debug: CommandHandler: Hope: Mute has been added
 Debug: CommandHandler: Hope: Ping has been added
 Debug: CommandHandler: Hope: Purge has been added
 Debug: CommandHandler: Hope: Send has been added
-Debug: CommandHandler: Hope: Settings has been added
+Debug: CommandHandler: Hope: disabled command
 Debug: CommandHandler: Hope: Test_mode has been added
 Debug: CommandHandler: Hope: Unmute has been added
 Debug: CommandHandler: Hope: Update has been added
@@ -44,5 +44,3 @@ Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
 
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836.json
-
-Debug: Command: Settings: has been called

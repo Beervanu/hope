@@ -1,1 +1,0 @@
-Be'ervanu in #bot-test: .set JOIN_MESSAGES #bot-test
