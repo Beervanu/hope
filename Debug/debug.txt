@@ -1,4 +1,4 @@
-Started at Thu Jun 03 2021 12:54:11 GMT+0100 (British Summer Time)
+Started at Thu Jun 03 2021 13:27:22 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -32,15 +32,18 @@ Debug: CommandHandler: Hope: guildMemberUpdate (event) has been added
 Debug: CommandHandler: Hope: message (event) has been added
 Debug: CommandHandler: Hope: ready (event) has been added
 Debug: CommandHandler: Hope: voiceStateUpdate (event) has been added
-Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Commands (commands folder) has been added
-Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Events (events folder) has been added
+Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope\Commands (commands folder) has been added
+Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope\Events (events folder) has been added
 Debug: CommandHandler: Hope: connected
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Guilds: Retrieving files from 807914451457146900 (id)
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/845416889784991804/691652992679542836.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Guilds: 0 files left to download
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Retrieving files from 807914451457146900 (id)
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/845416889784991804/691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: 0 files left to download
 
 Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Guilds: Watching 691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836.json
+
+Debug: Command: Ping: has been called
+Debug: Command: Ping: execution time 179 ms
