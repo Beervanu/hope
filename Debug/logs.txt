@@ -1,8 +1,0 @@
-Be'ervanu in #💻bot-test: .j
-Hope in #💻bot-test: placeholder for non-text
-Carl-bot Logging in #voice-log: placeholder for non-text
-Be'ervanu in #💻bot-test: .c 5
-Hope in #💻bot-test: placeholder for non-text
-Be'ervanu in #💻bot-test: .dc
-Hope in #💻bot-test: placeholder for non-text
-Carl-bot Logging in #voice-log: placeholder for non-text

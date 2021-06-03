@@ -3,7 +3,7 @@ const path = require('path')
 const Discord = require('discord.js')
 
 //mine
-const si = JSON.parse(require('./sensitiveInfo.json'))
+const si = require('./sensitiveInfo.json')
 const command = require('./CommandHandler/command_handler.js')
 
 const client = new Discord.Client()

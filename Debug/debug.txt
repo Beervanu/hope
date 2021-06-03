@@ -1,4 +1,4 @@
-Started at Sat May 22 2021 19:40:17 GMT+0100 (British Summer Time)
+Started at Thu Jun 03 2021 12:54:11 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -32,30 +32,15 @@ Debug: CommandHandler: Hope: guildMemberUpdate (event) has been added
 Debug: CommandHandler: Hope: message (event) has been added
 Debug: CommandHandler: Hope: ready (event) has been added
 Debug: CommandHandler: Hope: voiceStateUpdate (event) has been added
-Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope\Commands (commands folder) has been added
-Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope\Events (events folder) has been added
+Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Commands (commands folder) has been added
+Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Events (events folder) has been added
 Debug: CommandHandler: Hope: connected
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Retrieving files from 807914451457146900 (id)
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Downloading and rewriting 757988443770060900.json from https://cdn.discordapp.com/attachments/831493262749335592/845716540808888350/757988443770060900.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Downloading and rewriting 588118182380699710.json from https://cdn.discordapp.com/attachments/831493262749335592/845716541021487134/588118182380699710.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: 1 files left to download
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: 0 files left to download
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Guilds: Retrieving files from 807914451457146900 (id)
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/845416889784991804/691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Guilds: 0 files left to download
 
 Debug: CommandHandler: Hope: Files retrieved from backup
-Debug: CommandHandler: Hope: 10W Official Discord (server file) has been loaded
+Debug: CommandHandler: Hope: b t (server file) has been loaded
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 588118182380699710.json
-
-Debug: CommandHandler: Hope: Yr 10 SGS Official Server (server file) has been loaded
-
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 757988443770060900.json
-
-Debug: Command: Join: has been called
-Debug: Command: Join: execution time 1065 ms
-
-Debug: Command: Clip: has been called
-Debug: Command: Clip: execution time 6 ms
-
-Debug: Command: Disconnect: has been called
-Debug: Command: Disconnect: execution time 3 ms
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope-GitHub\Hope\Guilds: Watching 691652992679542836.json
