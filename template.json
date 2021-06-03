@@ -1,0 +1,22 @@
+{
+	"settings": 
+	{
+		"channels":
+		{
+			"JOIN_MESSAGES": 
+			{
+				"help": "The channel to which messages are sent when people join"
+			},
+			"LEAVE_MESSAGES": 
+			{
+				"help": "The channel to which messages are sent when people leave"
+			}
+		}
+	},
+	"people": 
+	{
+
+	},
+	"bruh_counter": 0,
+	"among_us_code": "there isn't one yet"
+}

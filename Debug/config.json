@@ -1,0 +1,11 @@
+{
+	"debug":
+	{
+		"show_debug_messages": true
+	},
+	"logs": 
+	{
+		"show_logs": true,
+		"simplified": true
+	}
+}
