@@ -21,6 +21,8 @@
     "audio-mixer": "^2.1.4",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
+    "imap": "^0.8.19",
+    "node-powershell": "^4.0.0",
     "readable-stream-clone": "^0.0.7",
     "request": "^2.88.2"
   },

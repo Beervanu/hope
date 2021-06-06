@@ -1,6 +1,5 @@
-let concurrentClips = 2
+const imap = require('imap')
 
-for (;concurrentClips--;)
-	{
-		console.log('epic')
-	}
+let conn = new imap({
+	user: 
+})

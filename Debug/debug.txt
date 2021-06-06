@@ -1,4 +1,4 @@
-Started at Thu Jun 03 2021 13:27:22 GMT+0100 (British Summer Time)
+Started at Sat Jun 05 2021 23:03:21 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -16,6 +16,7 @@ Debug: CommandHandler: Hope: Debug has been added
 Debug: CommandHandler: Hope: Disconnect has been added
 Debug: CommandHandler: Hope: Help has been added
 Debug: CommandHandler: Hope: Join has been added
+Debug: CommandHandler: Hope: Move_hope has been added
 Debug: CommandHandler: Hope: Mute has been added
 Debug: CommandHandler: Hope: Ping has been added
 Debug: CommandHandler: Hope: Purge has been added
@@ -45,5 +46,4 @@ Debug: CommandHandler: Hope: b t (server file) has been loaded
 
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836.json
 
-Debug: Command: Ping: has been called
-Debug: Command: Ping: execution time 179 ms
+Debug: Command: Move_hope: has been called
