@@ -13,5 +13,5 @@ ch.add_commands(path.resolve('./Commands'), path.resolve('./Checks'))
 ch.add_events(path.resolve('./Events'))
 ch.template=path.resolve('./template.json')
 
-client.login(process.env.TOKEN) //actual bot
-// client.login(process.env.TEST) // test
+// client.login(process.env.TOKEN) //actual bot
+client.login(process.env.TEST) // test

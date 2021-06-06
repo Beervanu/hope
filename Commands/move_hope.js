@@ -27,6 +27,6 @@ exports.info = {
 	group: 'Dev',
 	brief_desc: 'Moves the bot host',
 	long_desc: '[host_number(default:0)] - the number of the host (0-1)',
-	usage: '[host_number(default:0)]'
+	usage: '[host_number(default:0)]',
 	checks: ['only_me']
 }
