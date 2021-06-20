@@ -11,11 +11,6 @@ exports.Backup = class Backup extends EventEmitter
     	process.on('SIGTERM', () =>
 		{
 			this.backup().then(() => process.exit())
-			// client.users.fetch('574154383399452673').then(usr => 
-			// 	usr.send('graceful close').then(() => 
-			// 		process.exit()
-			// 	)
-			// )
 		})
     	this.name = directory
     	this.client = client
