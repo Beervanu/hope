@@ -48,3 +48,5 @@ Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 69165
 
 Debug: Command: Ping: has been called
 Debug: Command: Ping: execution time 178 ms
+Debug: Command: Ping: has been called
+Debug: Command: Ping: execution time 260 ms

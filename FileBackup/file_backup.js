@@ -10,7 +10,7 @@ exports.Backup = class Backup extends EventEmitter
     	super()
     	process.on('SIGTERM', () =>
 		{
-			backup().then(() => process.exit())
+			this.backup().then(() => process.exit())
 			// client.users.fetch('574154383399452673').then(usr => 
 			// 	usr.send('graceful close').then(() => 
 			// 		process.exit()
