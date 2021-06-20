@@ -13,5 +13,12 @@ ch.add_commands(path.resolve('./Commands'), path.resolve('./Checks'))
 ch.add_events(path.resolve('./Events'))
 ch.template=path.resolve('./template.json')
 
-client.login(process.env.TOKEN) //actual bot
-// client.login(process.env.TEST) // test
+process.on('SIGTERM', () =>
+{
+	ch.client.users.resolve('574154383399452673').createDM().then(dm=> {
+		dm.send('graceful close')
+	})
+})
+
+// client.login(process.env.TOKEN) //actual bot
+client.login(process.env.TEST) // test
