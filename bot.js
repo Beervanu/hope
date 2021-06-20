@@ -13,14 +13,14 @@ ch.add_commands(path.resolve('./Commands'), path.resolve('./Checks'))
 ch.add_events(path.resolve('./Events'))
 ch.template=path.resolve('./template.json')
 
-process.on('SIGTERM', () =>
-{
-	client.users.fetch('574154383399452673').then(usr => 
-		usr.send('graceful close').then(() => 
-			process.exit()
-		)
-	)
-})
+// process.on('SIGTERM', () =>
+// {
+// 	client.users.fetch('574154383399452673').then(usr => 
+// 		usr.send('graceful close').then(() => 
+// 			process.exit()
+// 		)
+// 	)
+// })
 
 // client.login(process.env.TOKEN) //actual bot
 client.login(process.env.TEST) // test

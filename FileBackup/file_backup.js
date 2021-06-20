@@ -8,6 +8,15 @@ exports.Backup = class Backup extends EventEmitter
     constructor(client, backup_user_id, directory)
     {
     	super()
+    	process.on('SIGTERM', () =>
+		{
+			backup().then(() => process.exit())
+			// client.users.fetch('574154383399452673').then(usr => 
+			// 	usr.send('graceful close').then(() => 
+			// 		process.exit()
+			// 	)
+			// )
+		})
     	this.name = directory
     	this.client = client
     	this.directory = directory
@@ -19,8 +28,7 @@ exports.Backup = class Backup extends EventEmitter
 
     watch(filename)
     {
-        this.files.push(filename)
-        fs.watch(`${this.directory}/${filename}`, this.backup.bind(this))
+        this.files.push(`${this.directory}/${filename}`)
         Debug.debug(`Watching ${filename}`, this)
     }
 
@@ -41,21 +49,12 @@ exports.Backup = class Backup extends EventEmitter
 			})
     }
 
-    backup(eventType, filename)
+    async backup()
     {
-        if (eventType === 'change'&&this.retrieved)
+        await this.client.users.resolve(this.backup_user_id).createDM().then(dm=> 
         {
-        	let resolvedFiles = []
-        	for(let i = this.files.length; i--;)
-        	{
-        		Debug.debug(`Backing up ${this.files[i]}`, this)
-        		resolvedFiles.push(`${this.directory}/${this.files[i]}`)
-        	}
-            this.client.users.resolve(this.backup_user_id).createDM().then(dm=> 
-            {
-            	dm.send({files: resolvedFiles})
-            })
-        }
+        	dm.send({files: this.files})
+        })
     }
 
     download(attachment)

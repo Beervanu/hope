@@ -74,7 +74,7 @@ exports.CommandHandler = class CommandHandler
 
 					this.save_guild_json(guild.id)
 				}
-				this.backup.watch(`${guild.id}.json`)
+				this.backup.watch(guild.id)
 			})
 			
 		})
