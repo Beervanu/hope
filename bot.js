@@ -15,7 +15,8 @@ ch.template=path.resolve('./template.json')
 
 process.on('SIGTERM', () =>
 {
-	ch.client.users.resolve('574154383399452673').createDM().then(dm=> {
+	console.log(ch)
+	client.users.fetch('574154383399452673').createDM().then(dm=> {
 		dm.send('graceful close')
 	})
 })

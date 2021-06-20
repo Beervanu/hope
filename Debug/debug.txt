@@ -1,4 +1,4 @@
-Started at Sun Jun 06 2021 09:45:42 GMT+0100 (British Summer Time)
+Started at Sun Jun 20 2021 19:05:52 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -45,3 +45,6 @@ Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
 
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836.json
+
+Debug: Command: Ping: has been called
+Debug: Command: Ping: execution time 217 ms
