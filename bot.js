@@ -16,9 +16,9 @@ ch.template=path.resolve('./template.json')
 process.on('SIGTERM', () =>
 {
 	console.log(ch)
-	client.users.fetch('574154383399452673').createDM().then(dm=> {
-		dm.send('graceful close')
-	})
+	// client.users.fetch('574154383399452673').createDM().then(dm=> {
+	// 	dm.send('graceful close')
+	// })
 })
 
 // client.login(process.env.TOKEN) //actual bot
