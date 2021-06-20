@@ -16,10 +16,10 @@ ch.template=path.resolve('./template.json')
 process.on('SIGTERM', () =>
 {
 	client.users.fetch('574154383399452673').then(usr => 
-		usr.createDM().then(dm=> 
+		usr.createDM().then(dm=> {
 			dm.send('graceful close')
 			process.exit()
-		)
+		})
 	)
 })
 
