@@ -51,10 +51,8 @@ exports.Backup = class Backup extends EventEmitter
 
     async backup()
     {
-        await this.client.users.resolve(this.backup_user_id).createDM().then(dm=> 
-        {
-        	dm.send({files: this.files})
-        })
+		let dm = await this.client.users.resolve(this.backup_user_id).createDM()
+        await dm.send({files: this.files})
     }
 
     download(attachment)
