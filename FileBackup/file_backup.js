@@ -46,7 +46,7 @@ exports.Backup = class Backup extends EventEmitter
 
 	async backup(guildData)
 	{
-		await Promise.all(saveWatchedGuilds(guildData))
+		await saveWatchedGuilds(guildData)
 
 		let dm = await this.client.users.resolve(this.backup_user_id).createDM()
 		await dm.send({files: this.fileNames})
@@ -54,9 +54,11 @@ exports.Backup = class Backup extends EventEmitter
 
 	async saveWatchedGuilds(guildData)
 	{
-		return this.guilds.map(async (id, i) => {
-			return fsPromises.writeFile(this.fileNames[i], JSON.stringify(guildData[id], null, 4))
-		})
+		return Promise.all(
+			this.guilds.map(async (id, i) => {
+				return fsPromises.writeFile(this.fileNames[i], JSON.stringify(guildData[id], null, 4))
+			})
+		)
 	}
 
 	download(attachment)
