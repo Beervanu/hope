@@ -46,7 +46,7 @@ exports.Backup = class Backup extends EventEmitter
 
 	async backup(guildData)
 	{
-		await saveWatchedGuilds(guildData)
+		await this.saveWatchedGuilds(guildData)
 
 		let dm = await this.client.users.resolve(this.backup_user_id).createDM()
 		await dm.send({files: this.fileNames})
