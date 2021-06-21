@@ -54,9 +54,10 @@ exports.Backup = class Backup extends EventEmitter
 
 	async saveWatchedGuilds(guildData)
 	{
-		console.log(guildData)
+
 		return Promise.all(
 			this.guilds.map(async (id, i) => {
+				console.log(JSON.stringify(guildData[id], null, 4))
 				return fsPromises.writeFile(this.fileNames[i], JSON.stringify(guildData[id], null, 4))
 			})
 		)
