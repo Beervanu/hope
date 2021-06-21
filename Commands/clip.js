@@ -33,7 +33,7 @@ exports.info = {
 	usage: '[<seconds(default:30)>]',
 	long_desc: '**[<seconds(default:30)>]** - number of seconds to clip',
 	aliases: ['c'],
-	checks: ['bot_connected', 'voice_connected', 'only_guild', 'valid_clip_time']
+	checks: ['only_guild', 'voice_connected', 'bot_connected', 'valid_clip_time']
 }
 
 function header(duration)

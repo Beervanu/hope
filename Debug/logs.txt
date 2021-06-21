@@ -1,6 +1,2 @@
-Be'ervanu in #bot-test: .ping
-Test986 in #bot-test: Pong! (number to be calculated) ms
-Test986 in #Be'ervanu: graceful close
-Be'ervanu in #bot-test: .ping
-Test986 in #bot-test: Pong! (number to be calculated) ms
-Test986 in #bot-test: Pong! (number to be calculated) ms
+Be'ervanu in #bot-test: .j
+Test986 in #bot-test: placeholder for non-text

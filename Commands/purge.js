@@ -25,5 +25,5 @@ exports.info = {
 	extra: 'By default messages will not be filtered - all messages will be deleted\nIf a role or user is specified, then those with that role (or roles) messages will be deleted',
 	long_desc: '**[<limit(default:10)>]** - number of messages to check through\n**[<users>]** - users(mentions) to delete the messages of\n**[<roles>]** - roles(mentions) to delete the messages of',
 	usage: '[<limit(default:10)>] [<users>] [<roles>]',
-	checks: ['only_admin', 'only_guild']
+	checks: ['only_guild', 'only_admin']
 }

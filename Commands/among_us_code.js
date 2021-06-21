@@ -10,7 +10,6 @@ exports.func = async function among_us_code(msg, parameters)
 				description: `The new among us code is ${parameters[0]}`
 			}
 		})
-		this.command_handler.save_guild_json(msg.guild.id)
 	}
 	else
 	{

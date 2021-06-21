@@ -58,5 +58,5 @@ exports.info = {
 	brief_desc: 'Gets the bot to join vc',
 	usage: '[<concurrent clips(default:2)>]',
 	long_desc: '**[<concurrent clips(default:2)>]** - number of concurrent clips (once someone clips, that clip stream is reset to the time of clipping)',
-	checks: ['voice_connected', 'only_guild', 'bot_not_connected']
+	checks: ['only_guild', 'voice_connected', 'bot_not_connected']
 }

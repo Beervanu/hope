@@ -10,5 +10,5 @@ exports.info = {
 	brief_desc: 'Sends a message through the bot',
 	usage: '[<message>]',
 	long_desc: '**[<message>]** - the message to send through the bot',
-	checks: ['only_admin']
+	checks: ['only_guild', 'only_admin']
 }

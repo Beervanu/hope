@@ -1,4 +1,4 @@
-Started at Sun Jun 20 2021 20:41:51 GMT+0100 (British Summer Time)
+Started at Mon Jun 21 2021 20:57:24 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -38,15 +38,13 @@ Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope\Events (
 Debug: CommandHandler: Hope: connected
 
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Retrieving files from 807914451457146900 (id)
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/845416889784991804/691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/856264414205575178/691652992679542836.json
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: 0 files left to download
 
 Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836.json
 
-Debug: Command: Ping: has been called
-Debug: Command: Ping: execution time 178 ms
-Debug: Command: Ping: has been called
-Debug: Command: Ping: execution time 260 ms
+Debug: Command: Join: has been called
+Debug: Command: Join: Failed on check: voice_connected: You're not connected to a voice channel

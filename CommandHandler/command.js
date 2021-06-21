@@ -77,8 +77,19 @@ exports.Command = class Command extends Function
 			{
 				for (var i in this.checks)
 				{
-					check = this.checks[i].bind(this)(msg, parameters)
-					if (!check.check) break
+					try
+					{
+						check = this.checks[i].bind(this)(msg, parameters)
+						if (!check.check)
+						{
+							check.name = this.checks[i].name
+							break
+						}
+					}
+					catch (e)
+					{
+						Debug.debug(`Check produced error(probably check order): ${this.checks[i].name}: ${e}`)
+					}
 				}
 			}
 			else
@@ -99,7 +110,7 @@ exports.Command = class Command extends Function
 			}
 			else
 			{
-				Debug.debug(`Failed on check: ${check.error}`, this)
+				Debug.debug(`Failed on check: ${check.name}: ${check.error}`, this)
 				err = {embed: {
 					title: 'Wass going on',
 					description: check.error,

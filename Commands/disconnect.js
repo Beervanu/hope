@@ -7,5 +7,5 @@ exports.info = {
 	aliases: ['dc'],
 	group: 'Voice',
 	brief_desc: 'Disconnects the bot from the voice channel',
-	checks: ['bot_connected', 'voice_connected', 'only_guild']
+	checks: ['only_guild', 'voice_connected', 'bot_connected']
 }

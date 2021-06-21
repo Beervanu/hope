@@ -7,13 +7,7 @@ exports.CommandHandler = class CommandHandler
 	constructor(client, prefix, name, guild_dir, backup_user_id)
 	{
 		this.voice = {}
-		this.backup = new Backup.Backup(client, backup_user_id, guild_dir)
 		this.retrieved = false
-		this.backup.on('retrieved', () => {
-			this.Debug.debug(`Files retrieved from backup`, this)
-			this.load_guilds()
-			this.retrieved = true
-		})
 		this.Debug = Debug
 		this.client = client
 		this.name = name
@@ -23,6 +17,14 @@ exports.CommandHandler = class CommandHandler
 		this.server_template = {}
 		this.guilds = {}
 		this.guild_dir = guild_dir
+
+		
+		this.backup = new Backup.Backup(client, backup_user_id, this)
+		this.backup.on('retrieved', () => {
+			this.Debug.debug(`Files retrieved from backup`, this)
+			this.load_guilds()
+			this.retrieved = true
+		})
 	}
 
 	async process_message(msg)
@@ -71,8 +73,6 @@ exports.CommandHandler = class CommandHandler
 					guild.members.cache.each(member => {
 						this.guilds[guild.id].people[member.id] = {roles: member.roles.cache.keyArray()}
 					})
-
-					this.save_guild_json(guild.id)
 				}
 				this.backup.watch(`${guild.id}.json`)
 			})
@@ -126,7 +126,7 @@ exports.CommandHandler = class CommandHandler
 			info.command_handler = this
 			for (let i = checks.length; i--;)
 			{
-				info.checks.push(require(`${check_dir}/${checks[i]}.js`).func)
+				info.checks.unshift(require(`${check_dir}/${checks[i]}.js`).func)
 			}
 
 			let comnd = new command.Command(func, info)
@@ -140,10 +140,7 @@ exports.CommandHandler = class CommandHandler
 		}
 	}
 
-	save_guild_json(id)
-	{
-		fs.writeFileSync(`${this.guild_dir}/${id}.json`, JSON.stringify(this.guilds[id], null, 4))
-	}
+
 
 	message_searchers(msg)
 	{
@@ -151,7 +148,6 @@ exports.CommandHandler = class CommandHandler
 		if (msg.content.match(/b+r+u+h+/i))
 		{
 			this.guilds[msg.guild.id]['bruh_counter']++
-			this.save_guild_json(msg.guild.id)
 			msg.channel.send(`Bruh momento numero: ${this.guilds[msg.guild.id]['bruh_counter']}`).then(message => {
 				message.delete({timeout: 5000})
 			})

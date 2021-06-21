@@ -11,7 +11,6 @@ exports.func = async function settings(msg, parameters)
 			}
 		})
 	}
-	this.command_handler.save_guild_json(msg.guild.id)
 }	
 
 exports.info = {
