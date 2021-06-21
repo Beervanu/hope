@@ -25,6 +25,11 @@ exports.CommandHandler = class CommandHandler
 			this.load_guilds()
 			this.retrieved = true
 		})
+
+		process.on('SIGTERM', () =>
+		{
+			this.backup.backup(this.guilds).then(() => process.exit())
+		})
 	}
 
 	async process_message(msg)

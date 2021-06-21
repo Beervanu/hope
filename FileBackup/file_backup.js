@@ -9,15 +9,12 @@ exports.Backup = class Backup extends EventEmitter
     constructor(client, backup_user_id, command_handler)
     {
     	super()
-    	process.on('SIGTERM', () =>
-		{
-			this.backup().then(() => process.exit())
-		})
-		this.command_handler = command_handler
+    	
     	this.directory = command_handler.guild_dir
     	this.name = command_handler.guild_dir
     	this.client = client
         this.guilds = []
+        this.fileNames = []
         this.retrieved = false
         this.backup_user_id = backup_user_id
         this.num_files_to_retrieve = 0
@@ -26,6 +23,7 @@ exports.Backup = class Backup extends EventEmitter
     watch(guildId)
     {
         this.guilds.push(guildId)
+        this.fileNames.push(`${this.directory}/${guildId}.json`)
         Debug.debug(`Watching ${guildId}`, this)
     }
 
@@ -46,20 +44,19 @@ exports.Backup = class Backup extends EventEmitter
 			})
 	}
 
-	async backup()
+	async backup(guildData)
 	{
-		console.log('epic');
-		let filenames = []
-		let writingFiles = this.guilds.map(async id => {
-			let filename = `${this.directory}/${id}.json`
-			filenames.push(filename)
-			return fsPromises.writeFile(filename, JSON.stringify(this.command_handler.guilds[id], null, 4))
-		})
-
-		await Promise.all(writingFiles)
+		await Promise.all(saveWatchedGuilds(guildData))
 
 		let dm = await this.client.users.resolve(this.backup_user_id).createDM()
-		await dm.send({files: filenames})
+		await dm.send({files: this.fileNames})
+	}
+
+	async saveWatchedGuilds(guildData)
+	{
+		return this.guilds.map(async (id, i) => {
+			return fsPromises.writeFile(this.fileNames[i], JSON.stringify(guildData[id], null, 4))
+		})
 	}
 
 	download(attachment)
@@ -77,8 +74,8 @@ exports.Backup = class Backup extends EventEmitter
 		Debug.debug(`${this.num_files_to_retrieve} files left to download`, this)
 		if(this.num_files_to_retrieve === 0)
 		{
-			this.emit('retrieved')
 			this.retrieved = true
+			this.emit('retrieved')
 		} 
 	}
 }
