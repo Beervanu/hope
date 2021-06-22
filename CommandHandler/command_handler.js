@@ -28,6 +28,7 @@ exports.CommandHandler = class CommandHandler
 
 		process.on('SIGTERM', () =>
 		{
+			Debug.debug(`Preparing for termination`, this)
 			this.backup.backup(this.guilds).then(() => process.exit())
 		})
 	}
@@ -79,7 +80,7 @@ exports.CommandHandler = class CommandHandler
 						this.guilds[guild.id].people[member.id] = {roles: member.roles.cache.keyArray()}
 					})
 				}
-				this.backup.watch(`${guild.id}.json`)
+				this.backup.watch(guild.id)
 			})
 			
 		})

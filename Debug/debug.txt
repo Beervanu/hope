@@ -1,4 +1,4 @@
-Started at Mon Jun 21 2021 20:57:24 GMT+0100 (British Summer Time)
+Started at Tue Jun 22 2021 11:30:01 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -16,6 +16,7 @@ Debug: CommandHandler: Hope: Debug has been added
 Debug: CommandHandler: Hope: Disconnect has been added
 Debug: CommandHandler: Hope: Help has been added
 Debug: CommandHandler: Hope: Join has been added
+Debug: CommandHandler: Hope: Kill has been added
 Debug: CommandHandler: Hope: Move_hope has been added
 Debug: CommandHandler: Hope: Mute has been added
 Debug: CommandHandler: Hope: Ping has been added
@@ -44,7 +45,7 @@ Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: 0 files left t
 Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836
 
-Debug: Command: Join: has been called
-Debug: Command: Join: Failed on check: voice_connected: You're not connected to a voice channel
+Debug: Command: Kill: has been called
+Debug: Command: Kill: execution time 38 ms
