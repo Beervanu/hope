@@ -1,4 +1,4 @@
-const shell = require('node-powershell')
+const Heroku = require('heroku-client')
 
 exports.func = async function move_hope(msg, parameters)
 {
