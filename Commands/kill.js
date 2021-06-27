@@ -5,7 +5,7 @@ exports.func = async function kill(msg, parameters)
 }
 
 exports.info = {
-	aliases: ['k'],
+	aliases: ['k', 'stop'],
 	group: 'Dev',
 	hidden: true,
 	checks: ['only_me']
