@@ -1,4 +1,4 @@
-Started at Tue Jun 22 2021 11:30:01 GMT+0100 (British Summer Time)
+Started at Sun Jun 27 2021 18:26:25 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -21,6 +21,7 @@ Debug: CommandHandler: Hope: Move_hope has been added
 Debug: CommandHandler: Hope: Mute has been added
 Debug: CommandHandler: Hope: Ping has been added
 Debug: CommandHandler: Hope: Purge has been added
+Debug: CommandHandler: Hope: Restart has been added
 Debug: CommandHandler: Hope: Send has been added
 Debug: CommandHandler: Hope: disabled command
 Debug: CommandHandler: Hope: Test_mode has been added
@@ -34,18 +35,23 @@ Debug: CommandHandler: Hope: guildMemberUpdate (event) has been added
 Debug: CommandHandler: Hope: message (event) has been added
 Debug: CommandHandler: Hope: ready (event) has been added
 Debug: CommandHandler: Hope: voiceStateUpdate (event) has been added
-Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope\Commands (commands folder) has been added
-Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\Hope\Events (events folder) has been added
+Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\hope\Commands (commands folder) has been added
+Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\hope\Events (events folder) has been added
 Debug: CommandHandler: Hope: connected
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Retrieving files from 807914451457146900 (id)
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/856264414205575178/691652992679542836.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: 0 files left to download
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds: Retrieving files from 807914451457146900 (id)
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/856846096063004682/691652992679542836.json
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds: 0 files left to download
 
 Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\Hope\Guilds: Watching 691652992679542836
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds: Watching 691652992679542836
 
 Debug: Command: Kill: has been called
-Debug: Command: Kill: execution time 38 ms
+
+Debug: CommandHandler: Hope: Preparing for termination
+
+Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds: Backing up C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds/691652992679542836.json
+
+Debug: Command: Kill: execution time 4 ms

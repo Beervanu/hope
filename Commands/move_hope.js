@@ -8,7 +8,7 @@ exports.func = async function move_hope(msg, parameters)
     	quantity: 1,
     	size: 'free'
     }})
-    hk.post(`/apps/${app_names[process.env.APP_VERSION]}/dynos/${process.env.DYNO}`)
+    hk.post(`/apps/${app_names[process.env.APP_VERSION]}/dynos/${process.env.dyno}/actions/stop`)
 }
 
 exports.info = {
@@ -18,5 +18,5 @@ exports.info = {
 	brief_desc: 'Moves the bot host',
 	long_desc: '[host_number(default:0)] - the number of the host (0-1)',
 	usage: '[host_number(default:0)]',
-	checks: ['only_me']
+	checks: ['only_me', 'on_heroku']
 }
