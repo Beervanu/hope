@@ -1,3 +1,5 @@
+const Heroku = require('heroku-client')
+
 exports.func = async function kill(msg, parameters)
 {
 	if(process.env.HEROKU_API_KEY)
