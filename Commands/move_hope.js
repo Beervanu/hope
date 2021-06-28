@@ -8,7 +8,10 @@ exports.func = async function move_hope(msg, parameters)
     	quantity: 1,
     	size: 'free'
     }})
-    hk.post(`/apps/${app_names[process.env.APP_VERSION]}/dynos/${process.env.DYNO}/actions/stop`)
+    await hk.patch(`/apps/${app_names[process.env.APP_VERSION]}/formation/worker`, {body: {
+    	quantity: 0,
+    	size: 'free'
+    }})
 }
 
 exports.info = {
