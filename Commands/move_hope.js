@@ -8,7 +8,7 @@ exports.func = async function move_hope(msg, parameters)
     	quantity: 1,
     	size: 'free'
     }})
-    hk.post(`/apps/${app_names[process.env.APP_VERSION]}/dynos/${process.env.dyno}/actions/stop`)
+    hk.post(`/apps/${app_names[process.env.APP_VERSION]}/dynos/${process.env.DYNO}/actions/stop`)
 }
 
 exports.info = {
