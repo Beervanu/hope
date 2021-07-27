@@ -1,6 +1,6 @@
 const Heroku = require('heroku-client')
 
-exports.func = async function move_hope(msg, parameters)
+exports.func = async function move_hope()
 {
 	let app_names = ['hope-js', 'hope-js2']
     let hk = new Heroku({token: process.env.HEROKU_API_KEY})
