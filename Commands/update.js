@@ -3,7 +3,7 @@ exports.func = async function update(msg, parameters)
 	let mode = ['add', 'remove'].includes(parameters[0]) ? parameters[0] : 'add'
 	let update_embed = {
 			title: 'Editing roles',
-			color: 'GOLD',
+			color: this.colours.admin,
 			description: `Mode: ${mode}`,
 			footer: ''
 	}
@@ -33,7 +33,7 @@ exports.func = async function update(msg, parameters)
 		embed: {
 			title: 'Finished Editing Roles',
 			description: `Members Edited: ${members_edited.join(', ')}`,
-			color: 'GOLD',
+			color: this.colours.admin,
 			footer: {text: 'Completed'}
 		}
 	})

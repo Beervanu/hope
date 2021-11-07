@@ -2,7 +2,7 @@ exports.func = async function unmute(msg, parameters)
 {
 	let mute_message = await msg.channel.send({embed: {
 		title: 'Unmuting',
-		color: 'GOLD',
+		color: this.colours.admin,
 		description: 'Starting to unmute...'
 
 	}})
@@ -12,7 +12,7 @@ exports.func = async function unmute(msg, parameters)
 		mute_message.edit({
 			embed: {
 				title: 'Unmuting',
-				color: 'GOLD',
+				color: this.colours.admin,
 				description: `Unmuted <@${member.id}>`
 			}
 		})

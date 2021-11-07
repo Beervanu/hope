@@ -6,7 +6,7 @@ exports.func = async function settings(msg, parameters)
 		msg.channel.send({
 			embed: {
 				title: 'Settings',
-				color: 'BLUE',
+				color: this.colours.setting,
 				description: `${parameters[0]} set to ${msg.mentions.channels.first()}`
 			}
 		})
@@ -17,7 +17,7 @@ exports.info = {
 	aliases: ['set'],
 	group: 'Admin',
 	brief_desc: 'Change the settings for your guild',
+	long_desc: '**<channel>** - set a channel to send messages to',
+	usage: '<channel>',
 	checks: ['is_valid_setting', 'only_admin', 'only_guild']
 }
-
-exports.disabled = true

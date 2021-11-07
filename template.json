@@ -1,17 +1,9 @@
 {
-	"settings": 
+	"channels":
 	{
-		"channels":
-		{
-			"JOIN_MESSAGES": 
-			{
-				"help": "The channel to which messages are sent when people join"
-			},
-			"LEAVE_MESSAGES": 
-			{
-				"help": "The channel to which messages are sent when people leave"
-			}
-		}
+		"JOIN_MESSAGES": "The channel to which messages are sent when people join",
+		"LEAVE_MESSAGES": "The channel to which messages are sent when people leave",
+		"REMINDERS": "The channel in which reminders are sent"
 	},
 	"people": 
 	{

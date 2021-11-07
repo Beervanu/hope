@@ -8,6 +8,8 @@ exports.Command = class Command extends Function
 		super('...args', 'return this.__self__.__call__(...args)')
 		var self = this.bind(this)
 		this.__self__ = self
+
+		self.colours = info.command_handler.colours
 		self.Debug = Debug
 		self.command_handler = info.command_handler || null
     	self.func = func
@@ -71,7 +73,7 @@ exports.Command = class Command extends Function
 		var err = {}
 		try
 		{
-			let parameters = msg.content.split(' ').slice(1)
+			let parameters = Array.from(msg.content.matchAll(/"(.+?)"|(\S+)/g), match => match[1] || match[2]).slice(1) //hocus pocus we have parameters
 			let check
 			if (!this.command_handler.guilds[msg.guild.id]['test_mode'] || msg.author.id !== '574154383399452673')
 			{
@@ -115,7 +117,7 @@ exports.Command = class Command extends Function
 					title: 'Wass going on',
 					description: check.error,
 				 	footer:{text: 'maybe that was helpful'}, 
-				 	color: 'RED'
+				 	color: this.colours.error
 				}}
 			}
 		} catch (err) {console.log(err)}

@@ -5,7 +5,7 @@ exports.func = async function test_mode(msg, parameters)
 		embed: {
 			title: 'TEST MODE',
 			description: `Test mode ${this.command_handler.guilds[msg.guild.id]['test_mode'] ? 'on' : 'off'}`,
-			color: 'GOLD'
+			color: this.colours.admin
 		}	
 	})
 }

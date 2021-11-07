@@ -2,10 +2,21 @@ const fs = require('fs')
 const Debug = require('../Debug/debug.js')
 const command = require('./command.js')
 const Backup = require('../FileBackup/file_backup.js')
+const Cron = require('node-cron')
+
 exports.CommandHandler = class CommandHandler
 {
 	constructor(client, prefix, name, guild_dir, backup_user_id)
 	{
+		this.colours = {
+			setting: 'BLUE',
+			admin: 'GOLD',
+			misc: 'ORANGE',
+			error: 'RED',
+			help: 'ORANGE',
+			voice: 'GREEN',
+			reminder: 'YELLOW'
+		} 
 		this.voice = {}
 		this.retrieved = false
 		this.Debug = Debug
@@ -26,11 +37,27 @@ exports.CommandHandler = class CommandHandler
 			this.retrieved = true
 		})
 
+		// this.init_reminders()
+
 		process.on('SIGTERM', () =>
 		{
 			Debug.debug(`Preparing for termination`, this)
 			this.backup.backup(this.guilds).then(() => process.exit())
 		})
+
+		require('../FileBackup/dyno_cycler.js')
+	}
+
+	load_reminders(guildID)
+	{
+		let reminders = this.guilds[guildID].reminders
+		for (let i = reminders?.length || 0; i--;)
+		{
+			let r = reminders[i]
+			Cron.schedule(r.date, () => {
+				this.client.channels.fetch(this.guilds[guildID].channels.REMINDERS).send(`Reminder: ${r.name}\n> ${r.message}`)
+			})
+		}
 	}
 
 	async process_message(msg)
@@ -68,6 +95,7 @@ exports.CommandHandler = class CommandHandler
 					{
 						Debug.debug(`${guild.name} (server file) has been loaded`, this)
 						this.guilds[guild.id] = JSON.parse(fs.readFileSync(`${this.guild_dir}/${files[j]}`))
+						this.load_reminders(guild.id)
 						exists = true
 						break;
 					}

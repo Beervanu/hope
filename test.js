@@ -1,5 +1,4 @@
-const imap = require('imap')
-
-let conn = new imap({
-	user: 
-})
+exports.func = async function yash()
+{
+	console.log('hello')
+}

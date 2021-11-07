@@ -7,11 +7,11 @@ const Discord = require('discord.js')
 const command = require('./CommandHandler/command_handler.js')
 
 const client = new Discord.Client()
-// '807914451457146900' cockslayer id
+
 const ch = new command.CommandHandler(client, '.', 'Hope', path.resolve('./Guilds'), process.env.BACKUP_ID)
+// client.login(process.env.TEST) // test
+client.login(process.env.TOKEN) //actual bot
+
 ch.add_commands(path.resolve('./Commands'), path.resolve('./Checks'))
 ch.add_events(path.resolve('./Events'))
 ch.template=path.resolve('./template.json')
-
-client.login(process.env.TOKEN) //actual bot
-// client.login(process.env.TEST) // test

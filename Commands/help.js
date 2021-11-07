@@ -27,7 +27,7 @@ exports.func = async function help(msg, parameters)
 			msg.channel.send({embed: {
 				title: 'Help Command',
 				description: description,
-				color: 'ORANGE'
+				color: this.colours.help
 			}})
 		} 
 		catch (err) 

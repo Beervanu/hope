@@ -6,7 +6,7 @@ exports.func = async function among_us_code(msg, parameters)
 		msg.channel.send({
 			embed:{
 				title: 'New Among Us Code',
-				color: 'GOLD',
+				color: this.colours.misc,
 				description: `The new among us code is ${parameters[0]}`
 			}
 		})
@@ -16,7 +16,7 @@ exports.func = async function among_us_code(msg, parameters)
 		msg.channel.send({
 			embed:{
 				title: 'Among Us Code',
-				color: 'GOLD',
+				color: this.colours.misc,
 				description: `The among us code is ${this.command_handler.guilds[msg.guild.id].among_us_code}`
 			}
 		})
