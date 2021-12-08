@@ -1,4 +1,1 @@
-exports.func = async function yash()
-{
-	console.log('hello')
-}
+console.log([1].reduce((prev, curr) => `${prev.toString()}${curr.toString()}, `, ''))

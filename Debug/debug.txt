@@ -1,4 +1,4 @@
-Started at Sat Nov 06 2021 19:47:17 GMT+0000 (Greenwich Mean Time)
+Started at Wed Dec 08 2021 18:36:59 GMT+0000 (Greenwich Mean Time)
 CONFIG FILE
 ------
     debug: 
@@ -48,3 +48,6 @@ Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
 
 Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds: Watching 691652992679542836
+
+Debug: Command: Update: has been called
+Debug: Command: Update: execution time 187 ms
