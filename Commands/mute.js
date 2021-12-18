@@ -25,5 +25,6 @@ exports.info = {
 	aliases: ['m', 'mu'],
 	group: 'Admin',
 	brief_desc: 'Mutes everyone in the voice channel you are connected to',
-	checks: ['only_guild', 'only_admin', 'voice_connected']
+	checks: ['only_guild', 'voice_connected'],
+	permissions: 'ADMINISTRATOR'
 }

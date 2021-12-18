@@ -1,1 +1,3 @@
-console.log([1].reduce((prev, curr) => `${prev.toString()}${curr.toString()}, `, ''))
+const Discord = require('discord.js')
+
+console.log(new Discord.Permissions('ADMINISTRATOR').toArray(false))

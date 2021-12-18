@@ -20,6 +20,7 @@ exports.Command = class Command extends Function
 		self.display_name = info.display_name || func.name[0].toUpperCase() + func.name.substring(1)
 		self.extra = info.extra ? `\n\n${info.extra}` : ''
 
+		self.permissions = new Discord.Permissions(info.permissions)
 		self.checks = info.checks || [(msg => {return {check: true, error: ''}})]
 		self.cooldown = info.cooldown || 0
 		self.cooldowns = {}
@@ -77,22 +78,32 @@ exports.Command = class Command extends Function
 			let check
 			if (!this.command_handler.guilds[msg.guild.id]['test_mode'] || msg.author.id !== '574154383399452673')
 			{
-				for (var i in this.checks)
+				if(msg.author.dmChannel || msg.member.permissionsIn(msg.channel).has(this.permissions))
 				{
-					try
+					for (var i in this.checks)
 					{
-						check = this.checks[i].bind(this)(msg, parameters)
-						if (!check.check)
+						try
 						{
-							check.name = this.checks[i].name
-							break
+							check = this.checks[i].bind(this)(msg, parameters)
+							if (!check.check)
+							{
+								check.name = this.checks[i].name
+								break
+							}
+						}
+						catch (e)
+						{
+							Debug.debug(`Check produced error(probably check order): ${this.checks[i].name}: ${e}`)
 						}
 					}
-					catch (e)
-					{
-						Debug.debug(`Check produced error(probably check order): ${this.checks[i].name}: ${e}`)
-					}
 				}
+				else
+				{
+					check = {
+						check: false,
+						error: `You do not have the correct permissions to run this command\n*(${this.permissions.toArray(false).join(', ')})*`
+					}
+				}				
 			}
 			else
 			{
