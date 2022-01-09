@@ -21,6 +21,12 @@ exports.debug = function debug(string, ctx = '')
 	}
 }
 
+exports.error = function error(e)
+{
+	exports.debug(e.message, e)
+	exports.debug(e.stack, e)
+}
+
 exports.log_message = function log_message(msg)
 {
 	if (CONFIG.logs.show_logs)

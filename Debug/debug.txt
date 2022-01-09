@@ -1,4 +1,4 @@
-Started at Sat Dec 18 2021 18:27:15 GMT+0000 (Greenwich Mean Time)
+Started at Sun Jan 09 2022 01:25:33 GMT+0000 (Greenwich Mean Time)
 CONFIG FILE
 ------
     debug: 
@@ -14,6 +14,7 @@ Debug: CommandHandler: Hope: Bruh_counter has been added
 Debug: CommandHandler: Hope: Clip has been added
 Debug: CommandHandler: Hope: Debug has been added
 Debug: CommandHandler: Hope: Disconnect has been added
+Debug: CommandHandler: Hope: Error has been added
 Debug: CommandHandler: Hope: Help has been added
 Debug: CommandHandler: Hope: Join has been added
 Debug: CommandHandler: Hope: Kill has been added
@@ -36,18 +37,25 @@ Debug: CommandHandler: Hope: guildMemberUpdate (event) has been added
 Debug: CommandHandler: Hope: message (event) has been added
 Debug: CommandHandler: Hope: ready (event) has been added
 Debug: CommandHandler: Hope: voiceStateUpdate (event) has been added
-Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\hope\Commands (commands folder) has been added
-Debug: CommandHandler: Hope: C:\Users\Jose\Desktop\Coding\Projects\hope\Events (events folder) has been added
+Debug: CommandHandler: Hope: c:\Users\fialh\Coding\hope\Commands (commands folder) has been added
+Debug: CommandHandler: Hope: c:\Users\fialh\Coding\hope\Events (events folder) has been added
 Debug: CommandHandler: Hope: connected
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds: Retrieving files from 807914451457146900 (id)
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/859144191610454126/691652992679542836.json
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds: 0 files left to download
+Debug: Backup: c:\Users\fialh\Coding\hope\Guilds: Retrieving files from 807914451457146900 (id)
+Debug: Backup: c:\Users\fialh\Coding\hope\Guilds: Downloading and rewriting 691652992679542836.json from https://cdn.discordapp.com/attachments/821836215312449588/859144191610454126/691652992679542836.json
+Debug: Backup: c:\Users\fialh\Coding\hope\Guilds: 0 files left to download
 
 Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
 
-Debug: Backup: C:\Users\Jose\Desktop\Coding\Projects\hope\Guilds: Watching 691652992679542836
+Debug: Backup: c:\Users\fialh\Coding\hope\Guilds: Watching 691652992679542836
 
-Debug: Command: Among_us_code: has been called
-Debug: Command: Among_us_code: execution time 6 ms
+Debug: Command: Join: has been called
+
+Debug: DiscordjsError: Error [VOICE_CONNECTION_TIMEOUT]: Connection not established within 15 seconds.
+Debug: DiscordjsError: Error [VOICE_CONNECTION_TIMEOUT]: Error [VOICE_CONNECTION_TIMEOUT]: Connection not established within 15 seconds.
+    at VoiceConnection.authenticateFailed (c:\Users\fialh\Coding\hope\node_modules\discord.js\src\client\voice\VoiceConnection.js:296:27)
+    at c:\Users\fialh\Coding\hope\node_modules\discord.js\src\client\voice\VoiceConnection.js:324:61
+    at Timeout.<anonymous> (c:\Users\fialh\Coding\hope\node_modules\discord.js\src\client\BaseClient.js:83:7)
+    at listOnTimeout (node:internal/timers:568:17)
+    at processTimers (node:internal/timers:510:7)

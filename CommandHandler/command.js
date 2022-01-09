@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const Debug = require('../Debug/debug.js')
+const {performance} = require('perf_hooks')
 
 exports.Command = class Command extends Function
 {
@@ -69,69 +70,66 @@ exports.Command = class Command extends Function
 
 	__call__(msg)
 	{
-		let start = Date.now()
+		let start = performance.now()
 		Debug.debug('has been called', this)
 		var err = {}
-		try
+		let parameters = Array.from(msg.content.matchAll(/"(.+?)"|(\S+)/g), match => match[1] || match[2]).slice(1) //hocus pocus we have parameters
+		let check
+		if (!this.command_handler.guilds[msg.guild.id]['test_mode'] || msg.author.id !== '574154383399452673')
 		{
-			let parameters = Array.from(msg.content.matchAll(/"(.+?)"|(\S+)/g), match => match[1] || match[2]).slice(1) //hocus pocus we have parameters
-			let check
-			if (!this.command_handler.guilds[msg.guild.id]['test_mode'] || msg.author.id !== '574154383399452673')
+			if(msg.author.dmChannel || msg.member.permissionsIn(msg.channel).has(this.permissions))
 			{
-				if(msg.author.dmChannel || msg.member.permissionsIn(msg.channel).has(this.permissions))
+				for (var i in this.checks)
 				{
-					for (var i in this.checks)
+					try
 					{
-						try
+						check = this.checks[i].bind(this)(msg, parameters)
+						if (!check.check)
 						{
-							check = this.checks[i].bind(this)(msg, parameters)
-							if (!check.check)
-							{
-								check.name = this.checks[i].name
-								break
-							}
+							check.name = this.checks[i].name
+							break
 						}
-						catch (e)
-						{
-							Debug.debug(`Check produced error(probably check order): ${this.checks[i].name}: ${e}`)
-						}
+					}
+					catch (e)
+					{
+						Debug.debug(`Check produced error(probably check order): ${this.checks[i].name}: ${e}`)
 					}
 				}
-				else
-				{
-					check = {
-						check: false,
-						error: `You do not have the correct permissions to run this command\n*(${this.permissions.toArray(false).join(', ')})*`
-					}
-				}				
 			}
 			else
 			{
 				check = {
-					check: msg.author.id === '574154383399452673',
-					error: 'Nope, wrong person'
+					check: false,
+					error: `You do not have the correct permissions to run this command\n*(${this.permissions.toArray(false).join(', ')})*`
 				}
+			}				
+		}
+		else
+		{
+			check = {
+				check: msg.author.id === '574154383399452673',
+				error: 'Nope, wrong person'
 			}
+		}
 
+		
+		if (check.check)
+		{
+			this.func.bind(this)(msg, parameters).then(() => {
+				Debug.debug(`execution time ${performance.now()-start} ms`, this)
+			}).catch(e => {Debug.error(e)})
 			
-			if (check.check)
-			{
-				this.func.bind(this)(msg, parameters).then(() => {
-					Debug.debug(`execution time ${Date.now()-start} ms`, this)
-				})
-				
-			}
-			else
-			{
-				Debug.debug(`Failed on check: ${check.name}: ${check.error}`, this)
-				err = {embed: {
-					title: 'Wass going on',
-					description: check.error,
-				 	footer:{text: 'maybe that was helpful'}, 
-				 	color: this.colours.error
-				}}
-			}
-		} catch (err) {console.log(err)}
+		}
+		else
+		{
+			Debug.debug(`Failed on check: ${check.name}: ${check.error}`, this)
+			err = {embed: {
+				title: 'Wass going on',
+				description: check.error,
+				footer:{text: 'maybe that was helpful'}, 
+				color: this.colours.error
+			}}
+		}
 		return err
 	}	
 }
