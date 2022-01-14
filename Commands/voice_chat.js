@@ -7,5 +7,6 @@ exports.info = {
 	aliases: ['vc'],
 	cooldown: 300000,
 	brief_desc: 'Shout at people to get in vc :)',
-	group: 'Miscellaneous'
+	group: 'Miscellaneous',
+	permissions: 'MENTION_EVERYONE'
 }
