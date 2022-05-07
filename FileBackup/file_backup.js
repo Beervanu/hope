@@ -30,26 +30,28 @@ exports.Backup = class Backup extends EventEmitter
     retrieve()
     {
     	Debug.debug(`Retrieving files from ${this.backup_user_id} (id)`, this)
-		this.client.users.resolve(this.backup_user_id).createDM()
-			.then(dm => 
+		this.client.users.fetch(this.backup_user_id)
+			.then(user => 
 			{
-				dm.messages.fetch({limit: 1}).then(messages =>
+				user.createDM().then(dm=> 
 				{
-					this.num_files_to_retrieve = messages.first()?.attachments.size
-					messages.first()?.attachments.each(att =>
-					{
-						this.download(att)
-					})						
-				})	
+					dm.messages.fetch({limit: 1}).then(messages => 
+						{
+							this.num_files_to_retrieve = messages.first()?.attachments.size
+							messages.first()?.attachments.each(att =>
+							{
+								this.download(att)
+							})						
+						})	
+				})
 			})
 	}
 
 	async backup(guildData)
 	{
 		await this.saveWatchedGuilds(guildData)
-
-		let dm = await this.client.users.resolve(this.backup_user_id).createDM()
-		await dm.send({files: this.fileNames})
+		this.client.users.send(this.backup_user_id, {files: this.fileNames})
+	
 	}
 
 	async saveWatchedGuilds(guildData)

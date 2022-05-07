@@ -11,7 +11,6 @@ const client = new Discord.Client({intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_M
 const ch = new command.CommandHandler(client, '.', 'Hope', path.resolve('./Guilds'), process.env.BACKUP_ID)
 client.login(process.env.TOKEN)
 
-
 ch.add_commands(path.resolve('./Commands'), path.resolve('./Checks'))
 ch.add_events(path.resolve('./Events'))
 ch.template=path.resolve('./template.json')
