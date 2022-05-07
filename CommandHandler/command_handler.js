@@ -192,10 +192,13 @@ exports.CommandHandler = class CommandHandler
 				message.delete({timeout: 5000})
 			})
 		}
-
 		if (match = msg.content.match(/c4arena\.com\S*/))
 		{
 			msg.channel.send(`http://${match}`)
+		}
+		if (msg.content.match(/🐀/))
+		{
+			msg.channel.send(`<@665479126148317187>`)
 		}
 	}
 }
