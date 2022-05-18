@@ -200,6 +200,10 @@ exports.CommandHandler = class CommandHandler
 		{
 			msg.channel.send(`<@665479126148317187>`)
 		}
+		if (msg.content.match(/🐔/))
+		{
+			msg.channel.send(`<@684835388505849879>`)
+		}
 	}
 }
 

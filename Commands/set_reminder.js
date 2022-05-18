@@ -11,22 +11,22 @@ exports.func = function set_reminder(msg, parameters)
 			one_time: parameters[3] ? (parameters[3].toLowerCase() === 'true') : true
 		})
 		msg.channel.send({
-			embed: {
+			embeds: [{
 				title: 'Reminder set',
 				description: `Reminder: ${parameters[0]}`,
 				color: this.colours.reminder
-			}
+			}]
 		})
 	}
 	else
 	{
 		msg.channel.send({
-			embed: {
+			embeds: [{
 				title: 'Wass going on',
 				description: 'not a valid cron date',
 				footer: {text: 'maybe that was helpful'},
 				color: this.colours.error
-			}
+			}]
 		})
 	}
 	

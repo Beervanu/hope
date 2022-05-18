@@ -29,11 +29,11 @@ exports.func = async function join(msg, parameters)
 	})
 
 	connection.on('disconnect', () => {
-		msg.channel.send({embed: {
+		msg.channel.send({embeds: [{
 			title: `Disconnected from ${connection.channel.name}`,
 			color: this.colours.voice,
 			description: 'Sadge'
-		}})	
+		}]})	
 		delete this.command_handler.voice[connection.channel.id]
 	})
 
@@ -45,11 +45,11 @@ exports.func = async function join(msg, parameters)
 	}
 
 
-	msg.channel.send({embed: {
+	msg.channel.send({embeds: [{
 		title: `Joined ${msg.member.voice.channel.name}`,
 		color: this.colours.voice,
 		description: 'Ready to clip'
-	}})	
+	}]})	
 }
 
 exports.info = {

@@ -1,4 +1,4 @@
-Started at Sun May 08 2022 00:35:48 GMT+0100 (British Summer Time)
+Started at Thu May 19 2022 00:14:26 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -25,6 +25,7 @@ Debug: CommandHandler: Hope: Restart has been added
 Debug: CommandHandler: Hope: Send has been added
 Debug: CommandHandler: Hope: Settings has been added
 Debug: CommandHandler: Hope: disabled command
+Debug: CommandHandler: Hope: Starboard has been added
 Debug: CommandHandler: Hope: Test_mode has been added
 Debug: CommandHandler: Hope: Unmute has been added
 Debug: CommandHandler: Hope: Update has been added
@@ -48,3 +49,27 @@ Debug: CommandHandler: Hope: Files retrieved from backup
 Debug: CommandHandler: Hope: b t (server file) has been loaded
 
 Debug: Backup: c:\Users\fialh\Coding\hope\Guilds: Watching 691652992679542836
+
+Debug: Command: Starboard: has been called
+Debug: Command: Starboard: execution time 429.8971000313759 ms
+
+Debug: Command: Help: has been called
+Debug: Command: Help: execution time 1.7608999609947205 ms
+
+Debug: Command: Join: has been called
+
+Debug: TypeError: TypeError: msg.member.voice.channel.join is not a function
+Debug: TypeError: TypeError: TypeError: msg.member.voice.channel.join is not a function
+    at Command.join [as func] (c:\Users\fialh\Coding\hope\Commands\join.js:7:50)
+    at Command.__call__ (c:\Users\fialh\Coding\hope\CommandHandler\command.js:118:24)
+    at Command.eval (eval at Command (c:\Users\fialh\Coding\hope\CommandHandler\command.js:9:3), <anonymous>:3:22)
+    at CommandHandler.process_message (c:\Users\fialh\Coding\hope\CommandHandler\command_handler.js:66:83)
+    at CommandHandler.on_message (c:\Users\fialh\Coding\hope\Events\on_message.js:6:8)
+    at Client.emit (node:events:390:28)
+    at MessageCreateAction.handle (c:\Users\fialh\Coding\hope\node_modules\discord.js\src\client\actions\MessageCreate.js:34:18)
+    at Object.module.exports [as MESSAGE_CREATE] (c:\Users\fialh\Coding\hope\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (c:\Users\fialh\Coding\hope\node_modules\discord.js\src\client\websocket\WebSocketManager.js:351:31)
+    at WebSocketShard.onPacket (c:\Users\fialh\Coding\hope\node_modules\discord.js\src\client\websocket\WebSocketShard.js:444:22)
+
+Debug: Command: Debug: has been called
+Debug: Command: Debug: execution time 1.5626999735832214 ms

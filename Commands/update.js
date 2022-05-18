@@ -7,7 +7,7 @@ exports.func = async function update(msg, parameters)
 			description: `Mode: ${mode}`,
 			footer: ''
 	}
-	let update_message = await msg.channel.send({embed: update_embed})
+	let update_message = await msg.channel.send({embeds: [update_embed]})
 
 	let members_edited = []
 	let roles_to_edit
@@ -28,7 +28,7 @@ exports.func = async function update(msg, parameters)
 		{
 			members_edited.push(member.displayName)
 			update_embed.footer = {text: `Adding roles to ${member.displayName}`}
-			update_message.edit({embed: update_embed})
+			update_message.edit({embeds: [update_embed]})
 			member.edit({roles: roles_to_edit.concat(member.roles.cache)})
 		})
 	}
@@ -38,7 +38,7 @@ exports.func = async function update(msg, parameters)
 		{
 			members_edited.push(member.displayName)
 			update_embed.footer = {text: `Removing roles from ${member.displayName}`}
-			update_message.edit({embed: update_embed})
+			update_message.edit({embeds: [update_embed]})
 			member.edit({roles: roles_to_edit.difference(member.roles.cache)})
 		})
 	}
@@ -47,12 +47,12 @@ exports.func = async function update(msg, parameters)
 	failed = failed.size ? failed.reduce((prev, curr) => `${prev.toString()}, ${curr.toString()}`) : ''
 	failed = failed ? `\nFailed to edit these roles: ${failed} as these roles are hoisted higher than you` : ''
 	update_message.edit({
-		embed: {
+		embeds: [{
 			title: 'Finished Editing Roles',
 			description: `Members Edited: ${members_edited.join(', ')}${failed}`,
 			color: this.colours.admin,
 			footer: {text: 'Completed'}
-		}
+		}]
 	})
 }
 

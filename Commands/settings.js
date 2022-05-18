@@ -4,11 +4,11 @@ exports.func = async function settings(msg, parameters)
 	{
 		this.command_handler.guilds[msg.guild.id]['channels'][parameters[0]] = msg.mentions.channels.first().id
 		msg.channel.send({
-			embed: {
+			embeds: [{
 				title: 'Settings',
 				color: this.colours.setting,
 				description: `${parameters[0]} set to ${msg.mentions.channels.first()}`
-			}
+			}]
 		})
 	}
 }	

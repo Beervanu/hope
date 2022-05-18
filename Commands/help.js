@@ -2,7 +2,7 @@ exports.func = async function help(msg, parameters)
 {
 	try
 	{
-		msg.channel.send({embed: this.command_handler.commands[parameters[0]].help_embed})
+		msg.channel.send({embeds: [this.command_handler.commands[parameters[0]].help_embed]})
 	} 
 	catch (err)
 	{
@@ -24,11 +24,11 @@ exports.func = async function help(msg, parameters)
 				description += `**${group}**\n${sorted_commands[group]}\n`
 			}
 
-			msg.channel.send({embed: {
+			msg.channel.send({embeds: [{
 				title: 'Help Command',
 				description: description,
 				color: this.colours.help
-			}})
+			}]})
 		} 
 		catch (err) 
 		{

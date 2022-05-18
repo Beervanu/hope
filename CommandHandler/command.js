@@ -123,7 +123,7 @@ exports.Command = class Command extends Function
 		else
 		{
 			Debug.debug(`Failed on check: ${check.name}: ${check.error}`, this)
-			err = {embed: {
+			err = {embeds: {
 				title: 'Wass going on',
 				description: check.error,
 				footer:{text: 'maybe that was helpful'}, 

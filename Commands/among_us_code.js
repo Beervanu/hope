@@ -4,21 +4,21 @@ exports.func = async function among_us_code(msg, parameters)
 	{
 		this.command_handler.guilds[msg.guild.id].among_us_code = parameters[0]
 		msg.channel.send({
-			embed:{
+			embeds:[{
 				title: 'New Among Us Code',
 				color: this.colours.misc,
 				description: `The new among us code is ${parameters[0]}`
-			}
+			}]
 		})
 	}
 	else
 	{
 		msg.channel.send({
-			embed:{
+			embeds:[{
 				title: 'Among Us Code',
 				color: this.colours.misc,
 				description: `The among us code is ${this.command_handler.guilds[msg.guild.id].among_us_code}`
-			}
+			}]
 		})
 	}
 }
