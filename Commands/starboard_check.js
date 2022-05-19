@@ -46,7 +46,7 @@ exports.func = async function starboard(msg, parameters)
 						embeds: [{
 							color: 'GOLD',
 							description: `[jump to message](${message.url})`,
-							timestamp: Date.now(),
+							timestamp: message.createdAt,
 							footer: {text: message.id},
 							author: {
 								name: message.author.username,
