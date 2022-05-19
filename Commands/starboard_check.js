@@ -26,7 +26,7 @@ exports.func = async function starboard(msg, parameters)
 				before: before_messageID
 			})
 			if(!messages.size) break;
-			messages.filter(message => message.content)
+			messages.filter(message => !message.author.bot)
 			.each(async message => {
 				let star_reactions = message.reactions.cache.get('⭐')?.count
 				if(star_reactions >= star_threshold)
@@ -39,17 +39,24 @@ exports.func = async function starboard(msg, parameters)
 							description: `Found ${++found_messages} starred messages`
 						}]
 					})
-					starboard.send({content: `⭐ ${star_reactions} <#${message.channel.id}>`,
+					let imageURL = message.attachments.filter(attachment=> attachment.contentType.startsWith('image')).first()?.url || message.embeds.filter(embed=> embed.type === 'image')[0]?.url
+					let videoURL = message.attachments.filter(attachment=> attachment.contentType.startsWith('video')).first()?.url || message.embeds.filter(embed=> embed.type === 'video')[0]?.url
+					starboard.send({
+						content: `⭐ ${star_reactions} <#${message.channel.id}>`,
 						embeds: [{
-						color: 'GOLD',
-						description: message.content,
-						timestamp: Date.now(),
-						footer: {text: message.id},
-						author: {
-							name: message.author.username,
-							iconURL: message.author.displayAvatarURL()
-						}
-					}]})
+							color: 'GOLD',
+							description: `[jump to message](${message.url})`,
+							timestamp: Date.now(),
+							footer: {text: message.id},
+							author: {
+								name: message.author.username,
+								iconURL: message.author.displayAvatarURL()
+							},
+							image: imageURL ? {url: imageURL} : undefined,
+							video: videoURL ? {url: videoURL} : undefined,
+							fields: message.content ? [{name: 'Message:', value: message.content}] : undefined
+						}]
+					})
 				}
 			})
 			

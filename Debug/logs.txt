@@ -1,12 +1,5 @@
-Be'ervanu in #bot-test: .starboard 3000 #starboard
+Be'ervanu in #bot-test: .starboard #starboard
 Test986 in #bot-test: placeholder for non-text
 Test986 in #starboard: ⭐ 1 #bot-test2
-Test986 in #starboard: ⭐ 1 #bot-test
-Test986 in #starboard: ⭐ 1 #bot-test
 Test986 in #starboard: ⭐ 1 #bot-test2
-Test986 in #starboard: ⭐ 2 #bot-test2
 Test986 in #starboard: ⭐ 1 #bot-test
-Be'ervanu in #bot-test: .h
-Test986 in #bot-test: placeholder for non-text
-Be'ervanu in #bot-test: .j
-Be'ervanu in #bot-test: .d
