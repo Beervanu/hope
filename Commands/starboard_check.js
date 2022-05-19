@@ -40,7 +40,7 @@ exports.func = async function starboard(msg, parameters)
 						}]
 					})
 					let imageURL = message.attachments.filter(attachment=> attachment.contentType?.startsWith('image')).first()?.url || message.embeds.filter(embed=> embed.type === 'image')[0]?.url
-					
+					trimmedMessage = 
 					starboard.send({
 						content: `⭐ ${star_reactions} <#${message.channel.id}>`,
 						embeds: [{
@@ -53,7 +53,7 @@ exports.func = async function starboard(msg, parameters)
 								iconURL: message.author.displayAvatarURL()
 							},
 							image: imageURL ? {url: imageURL} : undefined,
-							fields: message.content ? [{name: 'Message:', value: message.content}] : undefined
+							fields: message.content ? [{name: 'Message:', value: message.content > 1023 ? message.content.substring(0, 1024-3)+'...': message.content}] : undefined
 						}]
 					})
 				}
