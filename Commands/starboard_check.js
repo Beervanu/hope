@@ -40,7 +40,7 @@ exports.func = async function starboard(msg, parameters)
 						}]
 					})
 					let imageURL = message.attachments.filter(attachment=> attachment.contentType.startsWith('image')).first()?.url || message.embeds.filter(embed=> embed.type === 'image')[0]?.url
-					let videoURL = message.attachments.filter(attachment=> attachment.contentType.startsWith('video')).first()?.url || message.embeds.filter(embed=> embed.type === 'video')[0]?.url
+					
 					starboard.send({
 						content: `⭐ ${star_reactions} <#${message.channel.id}>`,
 						embeds: [{
@@ -53,7 +53,6 @@ exports.func = async function starboard(msg, parameters)
 								iconURL: message.author.displayAvatarURL()
 							},
 							image: imageURL ? {url: imageURL} : undefined,
-							video: videoURL ? {url: videoURL} : undefined,
 							fields: message.content ? [{name: 'Message:', value: message.content}] : undefined
 						}]
 					})
