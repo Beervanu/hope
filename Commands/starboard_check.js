@@ -39,7 +39,7 @@ exports.func = async function starboard(msg, parameters)
 							description: `Found ${++found_messages} starred messages`
 						}]
 					})
-					let imageURL = message.attachments.filter(attachment=> attachment.contentType.startsWith('image')).first()?.url || message.embeds.filter(embed=> embed.type === 'image')[0]?.url
+					let imageURL = message.attachments.filter(attachment=> attachment.contentType?.startsWith('image')).first()?.url || message.embeds.filter(embed=> embed.type === 'image')[0]?.url
 					
 					starboard.send({
 						content: `⭐ ${star_reactions} <#${message.channel.id}>`,
