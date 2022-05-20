@@ -7,4 +7,4 @@ exports.func = async function on_message(msg)
 	}
 }
 
-exports.event = 'message'
+exports.event = 'messageCreate'
