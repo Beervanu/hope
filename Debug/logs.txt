@@ -1,10 +1,3 @@
-Be'ervanu in #bot-test2: placeholder for non-text
-Be'ervanu in #bot-test: .starboard #starboard
-Test986 in #bot-test: placeholder for non-text
-Test986 in #starboard: ⭐ 1 #bot-test2
-Test986 in #starboard: ⭐ 1 #bot-test2
-Test986 in #starboard: ⭐ 1 #bot-test2
-Be'ervanu in #bot-test2: placeholder for non-text
 Be'ervanu in #bot-test: .starboard #starboard
 Test986 in #bot-test: placeholder for non-text
 Test986 in #starboard: ⭐ 1 #bot-test2

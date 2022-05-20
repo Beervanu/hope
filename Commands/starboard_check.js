@@ -1,5 +1,6 @@
 exports.func = async function starboard(msg, parameters)
 {
+	const imageFileTypes = ['.png', '.jpg', '.jpeg', '.jpe', '.jif', '.jfif', '.jfi', '.gif', '.webp', '.tiff', '.tif', '.psd', 'raw', '.jp2', '.j2k', '.jpf', '.jpx', '.jpm', '.mj2','.heif', '.heic']
 	let limit = parseInt(parameters[0]) || 10
 	let star_threshold = parseInt(parameters[1]) || 0
 	let update_message = await msg.reply({
@@ -39,7 +40,7 @@ exports.func = async function starboard(msg, parameters)
 							description: `Found ${++found_messages} starred messages`
 						}]
 					})
-					let imageURL = message.attachments.filter(attachment=> attachment.contentType?.startsWith('image')).first()?.url || message.embeds.filter(embed=> embed.type === 'image')[0]?.url
+					let imageURL = message.attachments.filter(attachment=> imageFileTypes.some(ft=>attachment.url.endsWith(ft))).first()?.url || message.embeds.filter(embed=> embed.type === 'image')[0]?.url
 					starboard.send({
 						content: `⭐ ${star_reactions} <#${message.channel.id}>`,
 						embeds: [{

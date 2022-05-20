@@ -1,4 +1,4 @@
-Started at Fri May 20 2022 14:11:02 GMT+0100 (British Summer Time)
+Started at Fri May 20 2022 18:28:01 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -34,7 +34,7 @@ Debug: CommandHandler: Hope: guildCreate (event) has been added
 Debug: CommandHandler: Hope: guildMemberAdd (event) has been added
 Debug: CommandHandler: Hope: guildMemberRemove (event) has been added
 Debug: CommandHandler: Hope: guildMemberUpdate (event) has been added
-Debug: CommandHandler: Hope: message (event) has been added
+Debug: CommandHandler: Hope: messageCreate (event) has been added
 Debug: CommandHandler: Hope: ready (event) has been added
 Debug: CommandHandler: Hope: voiceStateUpdate (event) has been added
 Debug: CommandHandler: Hope: c:\Users\fialh\Coding\hope\Commands (commands folder) has been added
@@ -51,6 +51,4 @@ Debug: CommandHandler: Hope: b t (server file) has been loaded
 Debug: Backup: c:\Users\fialh\Coding\hope\Guilds: Watching 691652992679542836
 
 Debug: Command: Starboard: has been called
-Debug: Command: Starboard: execution time 672.7907000184059 ms
-Debug: Command: Starboard: has been called
-Debug: Command: Starboard: execution time 582.2976999878883 ms
+Debug: Command: Starboard: execution time 526.253300011158 ms
