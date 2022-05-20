@@ -1,6 +1,7 @@
 exports.func = async function starboard(msg, parameters)
 {
 	const imageFileTypes = ['.png', '.jpg', '.jpeg', '.jpe', '.jif', '.jfif', '.jfi', '.gif', '.webp', '.tiff', '.tif', '.psd', 'raw', '.jp2', '.j2k', '.jpf', '.jpx', '.jpm', '.mj2','.heif', '.heic']
+	const videoFileTypes = ['.mp4', '.mov', '.wmv', '.webm']
 	let limit = parseInt(parameters[0]) || 10
 	let star_threshold = parseInt(parameters[1]) || 0
 	let update_message = await msg.reply({
@@ -31,8 +32,7 @@ exports.func = async function starboard(msg, parameters)
 			.each(async message => {
 				let star_reactions = message.reactions.cache.get('⭐')?.count
 				if(star_reactions >= star_threshold)
-				{
-					
+				{					
 					await update_message.edit({
 						embeds: [{
 							title: 'Resetting Starboard',
@@ -40,8 +40,11 @@ exports.func = async function starboard(msg, parameters)
 							description: `Found ${++found_messages} starred messages`
 						}]
 					})
-					let imageURL = message.attachments.filter(attachment=> imageFileTypes.some(ft=>attachment.url.endsWith(ft))).first()?.url || message.embeds.filter(embed=> embed.type === 'image')[0]?.url
+
+					
+					let imageURL = message.attachments.filter(attachment=> imageFileTypes.some(ft=>attachment.url.toLowerCase().endsWith(ft))).first()?.url || message.embeds.filter(embed=> embed.image)[0]?.url
 					starboard.send({
+						files: message.embeds.filter(embed=>embed.video).map(embed=>embed.url).concat(message.attachments.filter(attachment=> videoFileTypes.some(ft=>attachment.url.toLowerCase().endsWith(ft))).map(attachment=> attachment.url)),
 						content: `⭐ ${star_reactions} <#${message.channel.id}>`,
 						embeds: [{
 							color: 'GOLD',
