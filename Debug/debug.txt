@@ -1,4 +1,4 @@
-Started at Fri May 20 2022 18:55:36 GMT+0100 (British Summer Time)
+Started at Sun Oct 16 2022 16:08:07 GMT+0100 (British Summer Time)
 CONFIG FILE
 ------
     debug: 
@@ -50,5 +50,5 @@ Debug: CommandHandler: Hope: b t (server file) has been loaded
 
 Debug: Backup: c:\Users\fialh\Coding\hope\Guilds: Watching 691652992679542836
 
-Debug: Command: Starboard: has been called
-Debug: Command: Starboard: execution time 481.109600007534 ms
+Debug: Command: Mute: has been called
+Debug: Command: Mute: execution time 711.5558000206947 ms

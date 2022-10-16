@@ -1,8 +1,2 @@
-Be'ervanu in #bot-test: .starboard #starboard
+Be'ervanu in #bot-test: .m
 Test986 in #bot-test: placeholder for non-text
-Be'ervanu in #bot-test: lmao
-Test986 in #starboard: ⭐ 1 #bot-test2
-Test986 in #starboard: ⭐ 1 #bot-test2
-Test986 in #starboard: ⭐ 1 #bot-test2
-Test986 in #starboard: ⭐ 1 #bot-test2
-Test986 in #starboard: ⭐ 1 #bot-test2

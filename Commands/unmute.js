@@ -6,19 +6,21 @@ exports.func = async function unmute(msg, parameters)
 		description: 'Starting to unmute...'
 
 	}]})
+	let edits = []
 	msg.member.voice.channel.members.each(member =>
 	{
 		member.edit({mute: false})
-		mute_message.edit({
+		edits.push(mute_message.edit({
 			embeds: [{
 				title: 'Unmuting',
 				color: this.colours.admin,
 				description: `Unmuted <@${member.id}>`
 			}]
-		})
+		}))
 	})
-	mute_message.delete()
 	msg.delete()
+	await Promise.all(edits)
+	mute_message.delete()
 }
 
 exports.info = {
